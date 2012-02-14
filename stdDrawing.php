@@ -14,7 +14,7 @@ abstract class stdDrawing
 	
 	public static function Reg($Object)
 	{
-		array_push(self::$Objects,$Object);
+		self::$Objects[] = $Object;
 	}
 	
 	public static function UnReg($Item)
