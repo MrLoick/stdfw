@@ -1,0 +1,29 @@
+================================
+=== ZenGL 0.2.4 (2011.12.04) ===
+================================
+[00000000ms] Begin
+[00000000ms] Current mode: 1920 x 1080
+[00000127ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
+[00000174ms] GL_VERSION: 2.1.9029
+[00000174ms] GL_RENDERER: ATI Radeon HD 5450
+[00000175ms] GL_MAX_TEXTURE_SIZE: 16384
+[00000175ms] GL_ARB_TEXTURE_COMPRESSION: TRUE
+[00000175ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: TRUE
+[00000175ms] GL_SGIS_GENERATE_MIPMAP: TRUE
+[00000175ms] GL_MAX_TEXTURE_UNITS_ARB: 8
+[00000175ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: TRUE
+[00000175ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
+[00000175ms] GL_EXT_BLEND_FUNC_SEPARATE: TRUE
+[00000175ms] GL_MAX_RENDERBUFFER_SIZE: 16384
+[00000175ms] GL_EXT_FRAMEBUFFER_OBJECT: TRUE
+[00000175ms] WGL_PBUFFER: TRUE
+[00000175ms] Support WaitVSync: TRUE
+[00000188ms] Texture loaded: "php_debug.png"
+[00000204ms] Texture loaded: "php_stdfw.png"
+[00000205ms] DirectSound: loading DSound.dll
+[00000221ms] DirectSound: sound system initialized
+[00003778ms] Average FPS: 988
+[00003778ms] Timers to free: 2
+[00003778ms] Textures to free: 3
+[00003780ms] DirectSound: sound system finalized
+[00003799ms] End

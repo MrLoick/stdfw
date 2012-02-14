@@ -1,21 +1,21 @@
 <?
 
-function requireAll ( $path = '' )
+function requireAll ( $Path = '' )
 {
-	foreach((array)glob($path.'/*') as $path)
+	foreach((array)glob($Path.'/*') as $File)
 	{
-		if(is_dir($path))
-			requireAll($path);
-		else
+		if(is_file($File))
 		{
-			$ext = explode('.', $path);
+			$ext = explode('.', $File);
 			$ext = strtolower($ext[ sizeof($ext)-1 ]);
 			if($ext == 'php' or $ext == 'inc' or $ext == 'phb')
-				require($path);
+				require($File);
 		}
 	}
 }
 
+requireAll('../Core');
 requireAll('../Utils');
 requireAll('../Vectors');
-requireAll('../Core');
+requireAll('../Display');
+requireAll('..');

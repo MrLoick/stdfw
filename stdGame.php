@@ -17,7 +17,7 @@ class stdGame
 	
 	public function __construct()
 	{
-		$this->Screen = new Screen;
+		$this->Screen = new stdScreen;
 		
 		stdEvent::Reg( EVENT_LOAD, array($this,Load) );
 		stdEvent::Reg( EVENT_INIT, array($this,Init) );
