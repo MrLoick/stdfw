@@ -1,6 +1,7 @@
 <?
 
 /**
+ * Главный класс игры
  * @name StandardFramework stdGame
  * @author DENFER
  * @version 1.0.0

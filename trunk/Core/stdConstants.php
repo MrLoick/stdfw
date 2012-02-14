@@ -9,16 +9,31 @@
 
 define ( "INFINITY", 1e+1000 );
 
+define ( "nil", null );
+
 define ( "TEX_DEFAULT_2D", 1074 );
 
 define ( "SCREEN_WIDTH", 1 );
 define ( "SCREEN_HEIGHT", 2 );
 
-define ( "MAIN_CAM", 0 );
-define ( "MAIN_SPACE", 0 );
+define ( "DEFAULT_INDEX", 0 );
 
-define ( "EVENT_INIT", 0 );
-define ( "EVENT_LOAD", 1 );
-define ( "EVENT_DRAW", 2 );
-define ( "EVENT_UPDATE", 3 );
-define ( "EVENT_QUIT", 4 );
+define ( "MAIN_CAM", DEFAULT_INDEX );
+define ( "MAIN_SPACE", DEFAULT_INDEX );
+
+define ( "EVENT_CORE", 0xff );
+define ( "EVENT_INIT", 0 + EVENT_CORE );
+define ( "EVENT_LOAD", 1 + EVENT_CORE );
+define ( "EVENT_DRAW", 2 + EVENT_CORE );
+define ( "EVENT_UPDATE", 3 + EVENT_CORE );
+define ( "EVENT_QUIT", 4 + EVENT_CORE );
+
+
+define ( "FX_BLEND_NORMAL", 0 );
+define ( "FX_BLEND_ADD", 1 );
+define ( "FX_BLEND_MULT", 2 );
+define ( "FX_BLEND_BLACK", 3 );
+define ( "FX_BLEND_WHITE", 4 );
+define ( "FX_BLEND_MASK", 5 );
+define ( "FX_BLEND", 1048576 );
+define ( "FX_COLOR", 2097152 );
