@@ -14,7 +14,7 @@ class Game extends stdGame
 		
 	}
 	
-	public function Init()
+	public function Initialize()
 	{
 		stdMaxFPS(true);
 		$this->Screen->Caption = 'My firts game.';
