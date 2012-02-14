@@ -19,6 +19,7 @@ requireAll('../Utils');
 requireAll('../Vectors');
 requireAll('../Components');
 requireAll('../Objects');
+requireAll('../Props');
 requireAll('..');
 
 require('Game.php');
