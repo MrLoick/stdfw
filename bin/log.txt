@@ -3,7 +3,7 @@
 ================================
 [00000000ms] Begin
 [00000000ms] Current mode: 1920 x 1080
-[00000129ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
+[00000127ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
 [00000176ms] GL_VERSION: 2.1.9029
 [00000176ms] GL_RENDERER: ATI Radeon HD 5450
 [00000177ms] GL_MAX_TEXTURE_SIZE: 16384
@@ -17,14 +17,14 @@
 [00000177ms] GL_MAX_RENDERBUFFER_SIZE: 16384
 [00000177ms] GL_EXT_FRAMEBUFFER_OBJECT: TRUE
 [00000177ms] WGL_PBUFFER: TRUE
-[00000178ms] Support WaitVSync: TRUE
-[00000191ms] Texture loaded: "php_debug.png"
-[00000207ms] Texture loaded: "php_stdfw.png"
-[00000207ms] DirectSound: loading DSound.dll
-[00000222ms] DirectSound: sound system initialized
-[00000234ms] Texture loaded: "Content/miku.png"
-[00004288ms] Average FPS: 1247
-[00004288ms] Timers to free: 2
-[00004288ms] Textures to free: 4
-[00004289ms] DirectSound: sound system finalized
-[00004317ms] End
+[00000177ms] Support WaitVSync: TRUE
+[00000188ms] Texture loaded: "php_debug.png"
+[00000204ms] Texture loaded: "php_stdfw.png"
+[00000204ms] DirectSound: loading DSound.dll
+[00000219ms] DirectSound: sound system initialized
+[00000232ms] Texture loaded: "Content/miku.png"
+[00006029ms] Average FPS: 1271
+[00006029ms] Timers to free: 2
+[00006029ms] Textures to free: 4
+[00006030ms] DirectSound: sound system finalized
+[00006062ms] End
