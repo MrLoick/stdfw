@@ -29,12 +29,6 @@ abstract class stdDrawing
 			SSprite_Draw($Object->Texture->Texture, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX);
 		}
 	}
-	
-	public static function Update($DeltaTime)
-	{
-		
-	}
 }
 
-stdEvent::Reg( EVENT_DRAW, 'stdDrawing::Draw' );
 stdEvent::Reg( EVENT_UPDATE, 'stdDrawing::Update' );
