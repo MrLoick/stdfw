@@ -15,12 +15,11 @@ class Game extends stdGame
 		global $Tex;
 		$Tex = new stdTexture;
 		$Tex->Load('Content/miku.png');
-		
 	}
 	
 	public function Initialize()
 	{
-		global $Tex;
+		global $Tex, $Sprite;
 		
 		stdMaxFPS(true);
 		$this->Screen->Caption = 'My firts game.';
@@ -32,6 +31,8 @@ class Game extends stdGame
 	
 	public function Update($DeltaTime)
 	{
+		global $Sprite;
+		$Sprite->X += normalize(0.1);
 		$this->Screen->Caption = 'FPS: '.$this->FPS;
 	}
 }
