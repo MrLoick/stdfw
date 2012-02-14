@@ -12,10 +12,6 @@ class stdObject extends Prototype
 {
 	public $Position;
 	public $Size;
-	public $X;
-	public $Y;
-	public $Width;
-	public $Height;
 	public function Get_X(){return $this->Position->X;}
 	public function Get_Y(){return $this->Position->Y;}
 	public function Set_X($X){$this->Position->X = $X;}
@@ -24,7 +20,15 @@ class stdObject extends Prototype
 	public function Get_Height(){return $this->Size->Y;}
 	public function Set_Width($X){$this->Size->X = $X;}
 	public function Set_Height($Y){$this->Size->Y = $Y;}
+	public $Angle = 0;
 	public $Alpha = 255;
 	public $Color = clWhite;
 	public $FX = FX_BLEND;
+	public function Update($DeltaTime){}
+		
+	public function __construct()
+	{
+		$this->Position = vec2();
+		$this->Size = vec2();	
+	}
 }
