@@ -30,5 +30,3 @@ function stdIncludeSource ( $Path = '' )
 	}catch ( Exception $e ){}
 	return false;
 }
-
-?>
