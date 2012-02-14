@@ -12,21 +12,22 @@ class Game extends stdGame
 {
 	public function LoadContent()
 	{
-		global $Tex;
-		$Tex = new stdTexture;
-		$Tex->Load('Content/miku.png');
+		global $Miku, $Tux;
+		$Miku = new stdTexture('Content/miku.png');
+		$Tux = new stdTexture('Content/tux.png');
 	}
 	
 	public function Initialize()
 	{
-		global $Tex, $Sprite;
+		global $Miku, $Tux, $Sprite;
 		
 		stdMaxFPS(true);
 		$this->Screen->Caption = 'My firts game.';
 		
-		$Sprite = new stdSSprite($Tex);
+		$Sprite = new stdSSprite($Miku);
+		$Sprite2 = new stdSSprite($Tux);
 		
-		stdDrawing::Reg($Sprite);
+		stdDrawing::Reg($Sprite,$Sprite2);
 	}
 	
 	public function Update($DeltaTime)

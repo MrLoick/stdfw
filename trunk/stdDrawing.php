@@ -12,9 +12,10 @@ abstract class stdDrawing
 {
 	protected static $Objects = array();
 	
-	public static function Reg($Object)
+	public static function Reg()
 	{
-		self::$Objects[] = $Object;
+		foreach((array)func_get_args() as $Object)
+			self::$Objects[] = $Object;
 	}
 	
 	public static function UnReg($Item)
@@ -29,8 +30,12 @@ abstract class stdDrawing
 			switch($Object->Type)
 			{
 				case TYPE_SPRITE:
-					SSprite_Draw($Object->Texture->Texture, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX); break;
+					if($Object->Visible && $Object->Texture->Id > -1)
+						SSprite_Draw($Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX); break;
 			}
+			
+			if($Object->Flags & FLAG_UPDATE)
+				$Object->Update($DeltaTime);
 		}
 	}
 }

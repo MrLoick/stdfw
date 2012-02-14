@@ -11,6 +11,8 @@
 class stdObject extends Prototype
 {
 	public $Type = TYPE_OBJECT;
+	public $Flags = FLAG_NONE;
+	public $Visible = true;
 	public $Position;
 	public $Size;
 	public function Get_X(){return $this->Position->X;}
