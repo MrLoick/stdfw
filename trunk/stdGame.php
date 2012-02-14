@@ -7,7 +7,7 @@
  * @copyright DENFER STUDIO
  */
 
-class stdGame
+class stdGame extends Prototype
 {
 	public $Physics = false;
 	public $VSync = false;
@@ -15,19 +15,24 @@ class stdGame
 	
 	public $Screen;
 	
+	public function Get_FPS()
+	{
+		return stdFPS();	
+	}
+	
 	public function __construct()
 	{
 		$this->Screen = new stdScreen;
 		
 		stdEvent::Reg( EVENT_LOAD, array($this,LoadContent) );
-		stdEvent::Reg( EVENT_INIT, array($this,Init) );
+		stdEvent::Reg( EVENT_INIT, array($this,Initialize) );
 		stdEvent::Reg( EVENT_DRAW, array($this,Draw) );
 		stdEvent::Reg( EVENT_UPDATE, array($this,Update) );
 		stdEvent::Reg( EVENT_QUIT, array($this,Quit) );
 	}
 	
 	public function LoadContent(){}
-	public function Init(){}
+	public function Initialize(){}
 	public function Draw($DeltaTime){}
 	public function Update($DeltaTime){}
 	public function Quit(){}
