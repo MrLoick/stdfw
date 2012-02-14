@@ -18,7 +18,7 @@
 }
 "Files"
 {
-    "Core\\Screen.php"
+    "bin\\Game.php"
     {
     "ProjRelPath" = "T"
     }
@@ -38,19 +38,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "stdEvent.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "bin"
     {
     "ProjRelPath" = "T"
     }
-    "Core\\stdCore.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "Core\\stdConstants.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "Core\\StandardFramework.php"
     {
     "ProjRelPath" = "T"
     }
@@ -66,7 +62,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "Core\\stdGame.php"
+    "Display\\stdScreen.php"
     {
     "ProjRelPath" = "T"
     }
@@ -74,7 +70,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "Core\\stdEvent.php"
+    "stdCore.php"
     {
     "ProjRelPath" = "T"
     }
@@ -86,7 +82,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "Display"
+    {
+    "ProjRelPath" = "T"
+    }
     "bin\\php5ts.dll"
+    {
+    "ProjRelPath" = "T"
+    }
+    "stdGame.php"
     {
     "ProjRelPath" = "T"
     }
