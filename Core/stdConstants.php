@@ -32,6 +32,9 @@ define ( "TYPE_OBJECT", 1 );
 define ( "TYPE_SSPRITE", 2 );
 define ( "TYPE_ASPRITE", 3 );
 
+define ( "FLAG_NONE", 0 );
+define ( "FLAG_UPDATE", 1 );
+
 define ( "FX_BLEND_NORMAL", 0 );
 define ( "FX_BLEND_ADD", 1 );
 define ( "FX_BLEND_MULT", 2 );

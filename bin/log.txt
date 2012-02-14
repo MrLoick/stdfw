@@ -1,30 +1,31 @@
 ================================
 === ZenGL 0.2.4 (2011.12.04) ===
 ================================
-[00000000ms] Begin
-[00000000ms] Current mode: 1920 x 1080
-[00000133ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
-[00000179ms] GL_VERSION: 2.1.9029
-[00000179ms] GL_RENDERER: ATI Radeon HD 5450
-[00000180ms] GL_MAX_TEXTURE_SIZE: 16384
-[00000180ms] GL_ARB_TEXTURE_COMPRESSION: TRUE
-[00000180ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: TRUE
-[00000180ms] GL_SGIS_GENERATE_MIPMAP: TRUE
-[00000180ms] GL_MAX_TEXTURE_UNITS_ARB: 8
-[00000180ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: TRUE
-[00000180ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
-[00000180ms] GL_EXT_BLEND_FUNC_SEPARATE: TRUE
-[00000180ms] GL_MAX_RENDERBUFFER_SIZE: 16384
-[00000180ms] GL_EXT_FRAMEBUFFER_OBJECT: TRUE
-[00000180ms] WGL_PBUFFER: TRUE
-[00000180ms] Support WaitVSync: TRUE
-[00000190ms] Texture loaded: "php_debug.png"
-[00000205ms] Texture loaded: "php_stdfw.png"
-[00000205ms] DirectSound: loading DSound.dll
-[00000220ms] DirectSound: sound system initialized
-[00000232ms] Texture loaded: "Content/miku.png"
-[00007187ms] Average FPS: 1340
-[00007187ms] Timers to free: 2
-[00007187ms] Textures to free: 4
-[00007188ms] DirectSound: sound system finalized
-[00007212ms] End
+[00000001ms] Begin
+[00000001ms] Current mode: 1920 x 1080
+[00000127ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
+[00000172ms] GL_VERSION: 2.1.9029
+[00000172ms] GL_RENDERER: ATI Radeon HD 5450
+[00000173ms] GL_MAX_TEXTURE_SIZE: 16384
+[00000173ms] GL_ARB_TEXTURE_COMPRESSION: TRUE
+[00000173ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: TRUE
+[00000173ms] GL_SGIS_GENERATE_MIPMAP: TRUE
+[00000173ms] GL_MAX_TEXTURE_UNITS_ARB: 8
+[00000173ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: TRUE
+[00000173ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
+[00000173ms] GL_EXT_BLEND_FUNC_SEPARATE: TRUE
+[00000173ms] GL_MAX_RENDERBUFFER_SIZE: 16384
+[00000173ms] GL_EXT_FRAMEBUFFER_OBJECT: TRUE
+[00000173ms] WGL_PBUFFER: TRUE
+[00000173ms] Support WaitVSync: TRUE
+[00000184ms] Texture loaded: "php_debug.png"
+[00000199ms] Texture loaded: "php_stdfw.png"
+[00000199ms] DirectSound: loading DSound.dll
+[00000214ms] DirectSound: sound system initialized
+[00000227ms] Texture loaded: "Content/miku.png"
+[00000232ms] Texture loaded: "Content/tux.png"
+[00004163ms] Average FPS: 1186
+[00004163ms] Timers to free: 2
+[00004163ms] Textures to free: 5
+[00004164ms] DirectSound: sound system finalized
+[00004194ms] End

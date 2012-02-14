@@ -11,7 +11,7 @@ class stdTexture extends Prototype
 {
 	public $Id = -1;
 	
-	public function __contruct( $File = null, $Background = clRed, $FX = TEX_DEFAULT_2D )
+	public function __construct( $File = null, $Background = clRed, $FX = TEX_DEFAULT_2D )
 	{
 		$this->Load($File,$Background,$FX);
 	}
