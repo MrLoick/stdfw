@@ -16,12 +16,13 @@ class Game extends stdGame
 	
 	public function Init()
 	{
+		stdMaxFPS(true);
 		$this->Screen->Caption = 'My firts game.';
 	}
 	
 	public function Update($DeltaTime)
 	{
-		
+		$this->Screen->Caption = 'FPS: '.stdFPS();
 	}
 }
 
