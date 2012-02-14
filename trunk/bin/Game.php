@@ -22,7 +22,7 @@ class Game extends stdGame
 	
 	public function Update($DeltaTime)
 	{
-		$this->Screen->Caption = 'FPS: '.stdFPS();
+		$this->Screen->Caption = 'FPS: '.$this->FPS;
 	}
 }
 
