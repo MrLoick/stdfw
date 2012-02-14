@@ -19,3 +19,5 @@ requireAll('../Utils');
 requireAll('../Vectors');
 requireAll('../Display');
 requireAll('..');
+
+require('Game.php');
