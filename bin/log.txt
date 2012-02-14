@@ -1,29 +1,29 @@
 ================================
 === ZenGL 0.2.4 (2011.12.04) ===
 ================================
-[00000000ms] Begin
+[00000001ms] Begin
 [00000001ms] Current mode: 1920 x 1080
-[00000138ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
-[00000181ms] GL_VERSION: 2.1.9029
-[00000181ms] GL_RENDERER: ATI Radeon HD 5450
-[00000182ms] GL_MAX_TEXTURE_SIZE: 16384
-[00000182ms] GL_ARB_TEXTURE_COMPRESSION: TRUE
-[00000182ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: TRUE
-[00000182ms] GL_SGIS_GENERATE_MIPMAP: TRUE
-[00000182ms] GL_MAX_TEXTURE_UNITS_ARB: 8
-[00000182ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: TRUE
-[00000182ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
-[00000182ms] GL_EXT_BLEND_FUNC_SEPARATE: TRUE
-[00000182ms] GL_MAX_RENDERBUFFER_SIZE: 16384
-[00000182ms] GL_EXT_FRAMEBUFFER_OBJECT: TRUE
-[00000182ms] WGL_PBUFFER: TRUE
-[00000182ms] Support WaitVSync: TRUE
-[00000192ms] Texture loaded: "php_debug.png"
-[00000208ms] Texture loaded: "php_stdfw.png"
-[00000208ms] DirectSound: loading DSound.dll
-[00000222ms] DirectSound: sound system initialized
-[00004049ms] Average FPS: 1309
-[00004049ms] Timers to free: 2
-[00004049ms] Textures to free: 3
-[00004050ms] DirectSound: sound system finalized
-[00004078ms] End
+[00000131ms] wglChoosePixelFormatARB: zDepth = 24; stencil = 0; fsaa = 0
+[00000178ms] GL_VERSION: 2.1.9029
+[00000178ms] GL_RENDERER: ATI Radeon HD 5450
+[00000179ms] GL_MAX_TEXTURE_SIZE: 16384
+[00000179ms] GL_ARB_TEXTURE_COMPRESSION: TRUE
+[00000179ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: TRUE
+[00000179ms] GL_SGIS_GENERATE_MIPMAP: TRUE
+[00000179ms] GL_MAX_TEXTURE_UNITS_ARB: 8
+[00000179ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: TRUE
+[00000179ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
+[00000179ms] GL_EXT_BLEND_FUNC_SEPARATE: TRUE
+[00000179ms] GL_MAX_RENDERBUFFER_SIZE: 16384
+[00000179ms] GL_EXT_FRAMEBUFFER_OBJECT: TRUE
+[00000179ms] WGL_PBUFFER: TRUE
+[00000179ms] Support WaitVSync: TRUE
+[00000190ms] Texture loaded: "php_debug.png"
+[00000206ms] Texture loaded: "php_stdfw.png"
+[00000206ms] DirectSound: loading DSound.dll
+[00000221ms] DirectSound: sound system initialized
+[00003429ms] Average FPS: 1331
+[00003429ms] Timers to free: 2
+[00003429ms] Textures to free: 3
+[00003430ms] DirectSound: sound system finalized
+[00003462ms] End

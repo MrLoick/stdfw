@@ -17,7 +17,8 @@ function requireAll ( $Path = '' )
 requireAll('../Core');
 requireAll('../Utils');
 requireAll('../Vectors');
-requireAll('../Display');
+requireAll('../Components');
+requireAll('../Objects');
 requireAll('..');
 
 require('Game.php');
