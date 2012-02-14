@@ -29,8 +29,8 @@ define ( "EVENT_UPDATE", 3 + EVENT_CORE );
 define ( "EVENT_QUIT", 4 + EVENT_CORE );
 
 define ( "TYPE_OBJECT", 1 );
-define ( "TYPE_SPRITE", 2 );
-define ( "TYPE_ANIMATE_SPRITE", 3 );
+define ( "TYPE_SSPRITE", 2 );
+define ( "TYPE_ASPRITE", 3 );
 
 define ( "FX_BLEND_NORMAL", 0 );
 define ( "FX_BLEND_ADD", 1 );

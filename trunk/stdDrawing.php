@@ -26,9 +26,13 @@ abstract class stdDrawing
 	{
 		foreach(self::$Objects as $Object)
 		{
-			SSprite_Draw($Object->Texture->Texture, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX);
+			switch($Object->Type)
+			{
+				case TYPE_SPRITE:
+					SSprite_Draw($Object->Texture->Texture, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX); break;
+			}
 		}
 	}
 }
 
-stdEvent::Reg( EVENT_UPDATE, 'stdDrawing::Update' );
+stdEvent::Reg( EVENT_DRAW, 'stdDrawing::Draw' );
