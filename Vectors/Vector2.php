@@ -9,17 +9,17 @@
 
 
 /**
- * Instance Vector2 Object
+ * Instance Object of Vector2
  *
- * @param integer $x
- * @param integer $y
+ * @param integer $X
+ * @param integer $Y
  * @return Vector2 Vector2 Object
  *
  */
 
-function vec2($x=0, $y=0)
+function vec2( $X=0, $Y=0 )
 {
-	return new Vector2($x,$y);
+	return new Vector2($X,$Y);
 }
 
 class Vector2 extends Vector
@@ -27,9 +27,9 @@ class Vector2 extends Vector
 	public $X;
 	public $Y;
 	
-	public function __construct($x=0, $y=0)
+	public function __construct( $X = 0, $Y = 0 )
 	{
-		$this->X = $x;
-		$this->Y = $y;
+		$this->X = $X;
+		$this->Y = $Y;
 	}
 }
