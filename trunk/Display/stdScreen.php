@@ -11,6 +11,17 @@ class stdScreen extends Prototype
 {
 	private $_Width = 800;
 	private $_Height = 600;
+	private $_Caption = 'Powered By StandardFramework';
+	
+	public function Get_Caption()
+	{
+		return $this->_Caption;	
+	}
+	
+	public function Set_Caption($Caption)
+	{
+		stdSetCaption($Caption);	
+	}
 	
 	public function Get_Width()
 	{

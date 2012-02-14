@@ -16,7 +16,7 @@ class Game extends stdGame
 	
 	public function Init()
 	{
-		
+		$this->Screen->Caption = 'My firts game.';
 	}
 	
 	public function Update($DeltaTime)
