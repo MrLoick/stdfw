@@ -7,10 +7,10 @@
  * @copyright DENFER STUDIO
  */
 
-abstract class stdCore
+Abstract Class stdCore
 {
-    public static function LoadContent(){stdEvent::Call(EVENT_LOAD);}
-    public static function Initialize(){stdEvent::Call(EVENT_INIT);}
-    public static function Draw($DeltaTime){stdEvent::Call(EVENT_DRAW,array($DeltaTime));}
-    public static function Update($DeltaTime){stdEvent::Call(EVENT_UPDATE,array($DeltaTime));}
+    Public Static Function LoadContent(){stdEvent::Call(EVENT_LOAD);}
+    Public Static Function Initialize(){stdEvent::Call(EVENT_INIT);}
+    Public Static Function Draw($DeltaTime){stdEvent::Call(EVENT_DRAW,array($DeltaTime));}
+    Public Static Function Update($DeltaTime){stdEvent::Call(EVENT_UPDATE,array($DeltaTime));}
 }

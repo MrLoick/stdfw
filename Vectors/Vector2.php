@@ -17,17 +17,17 @@
  *
  */
 
-function vec2( $X=0, $Y=0 )
+Function vec2( $X=0, $Y=0 )
 {
     return new Vector2($X,$Y);
 }
 
-class Vector2 extends Vector
+Class Vector2 extends Vector
 {
-    public $X;
-    public $Y;
+    Public $X;
+    Public $Y;
 
-    public function __construct( $X = 0, $Y = 0 )
+    Public Function __construct( $X = 0, $Y = 0 )
     {
         $this->X = $X;
         $this->Y = $Y;

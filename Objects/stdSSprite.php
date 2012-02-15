@@ -7,20 +7,20 @@
  * @copyright DENFER STUDIO
  */
 
-class stdSSprite extends stdObject
+Class stdSSprite extends stdObject
 {
-    public $Type = TYPE_SPRITE;
+    Public $Type = TYPE_SSPRITE;
 
-    public $Texture;
+    Public $Texture;
 
-    public function __construct(stdTexture $Texture)
+    Public Function __construct(stdTexture $Texture)
     {
         parent::__construct();
 
         $this->Texture = $Texture;
 
-        $Info = stdTextureInfo($Texture->Id);
-
+        $Info = $Texture->Info();
+        
         $this->Size->X = $Info->Width;
         $this->Size->Y = $Info->Height;
     }

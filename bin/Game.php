@@ -7,29 +7,29 @@
  * @copyright DENFER STUDIO
  */
 
-class Game extends stdGame
+Class Game extends stdGame
 {
-    public function LoadContent()
+    Public Function LoadContent()
     {
         global $Miku, $Tux;
         $Miku = new stdTexture('Content/miku.png');
         $Tux = new stdTexture('Content/tux.png');
     }
 
-    public function Initialize()
+    Public Function Initialize()
     {
         global $Miku, $Tux, $Sprite;
 
         stdMaxFPS(true);
         $this->Screen->Caption = 'My firts game.';
 
-        $Sprite = new stdSSprite($Miku);
+        $Sprite = new stdASprite($Miku,4,2);
         $Sprite2 = new stdSSprite($Tux);
 
         stdDrawing::Reg($Sprite,$Sprite2);
     }
 
-    public function Update($DeltaTime)
+    Public Function Update($DeltaTime)
     {
         global $Sprite;
         /*$Sprite->X += normalize(0.1);

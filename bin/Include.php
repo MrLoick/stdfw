@@ -1,24 +1,17 @@
 <?
 
-function requireAll ( $Path = '' )
-{
-    foreach((array)glob($Path.'/*') as $File)
-    {
-        if(is_file($File))
-        {
-                $ext = explode('.', $File);
-                $ext = strtolower($ext[ sizeof($ext)-1 ]);
-                if($ext == 'php' or $ext == 'inc' or $ext == 'phb')
-                        require($File);
-        }
-    }
-}
+$Sources = array(   'stdConstants.php', 'Prototype.php',
+                    'stdCore.php', 'stdEvent.php',
+                    'stdDrawing.php', 'stdScreen.php',
+                    'stdGame.php', 'stdTexture.php',
+                    'stdAnimation.php',
+                    'Vectors/Vector.php', 'Vectors/Vector2.php',
+                    'Vectors/Vector3.php', 'Objects/stdObject.php', 
+                    'Objects/stdSSprite.php', 'Objects/stdASprite.php');
 
-requireAll('../Core');
-requireAll('../Utils');
-requireAll('../Vectors');
-requireAll('../Objects');
-requireAll('../Props');
-requireAll('..');
+$Path = '../';
+
+foreach((array)$Sources as $Source)
+    require $Path.$Source;
 
 require('Game.php');
