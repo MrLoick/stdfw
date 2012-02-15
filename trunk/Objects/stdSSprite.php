@@ -9,19 +9,19 @@
 
 class stdSSprite extends stdObject
 {
-	public $Type = TYPE_SPRITE;
-	
-	public $Texture;
-	
-	public function __construct(stdTexture $Texture)
-	{
-		parent::__construct();
+    public $Type = TYPE_SPRITE;
 
-		$this->Texture = $Texture;
-		
-		$Info = stdTextureInfo($Texture->Id);
-		
-		$this->Size->X = $Info->Width;
-		$this->Size->Y = $Info->Height;
-	}
+    public $Texture;
+
+    public function __construct(stdTexture $Texture)
+    {
+        parent::__construct();
+
+        $this->Texture = $Texture;
+
+        $Info = stdTextureInfo($Texture->Id);
+
+        $this->Size->X = $Info->Width;
+        $this->Size->Y = $Info->Height;
+    }
 }
