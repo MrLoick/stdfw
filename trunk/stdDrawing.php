@@ -15,7 +15,7 @@ Abstract Class stdDrawing
     Public Static Function Add($Object)
     {
         self::$Objects[] = $Object;
-        return count( self::$Objects ) - 1;   /* изменил sizeof на count (где-то читал что быстрее выполняется) */
+        return count( self::$Objects ) - 1;   /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ sizeof пїЅпїЅ count (пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ) */
     }
 
     Public Static Function Del($Id)
@@ -41,7 +41,7 @@ Abstract Class stdDrawing
     {
         foreach(self::$Objects as $Object)
         {
-            if($Object->Visible) //and $Object->Texture->Id > -1)  /* Убрал потому-что для отрисовки примитивов это невозможно */
+            if($Object->Visible) //and $Object->Texture->Id > -1)
             switch($Object->Type)
             {
                 case TYPE_SSPRITE:
