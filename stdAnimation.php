@@ -74,9 +74,6 @@ Class stdAnimation extends Prototype
         IF( $Col != NULL )
             $this->Col = $Col;
         
-        $this->Row = Ceil( $this->Row );
-        $this->Col = Ceil( $this->Col );
-        
         IF( $this->Col > $this->TextureInfo->FramesX or $this->Col < 1 )
                 $this->Col = 1;
         IF( $this->Row > $this->TextureInfo->FramesY or $this->Row < 1 )

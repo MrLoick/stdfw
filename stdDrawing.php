@@ -9,6 +9,7 @@
 
 Abstract Class stdDrawing
 {
+    Public Static $Game = null;
     Protected Static $Objects = array();
 
     Public Static Function Add($Object)

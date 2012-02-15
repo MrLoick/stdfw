@@ -24,6 +24,8 @@ Class stdGame extends Prototype
     {
         $this->Screen = new stdScreen;
 
+        stdDrawing::$Game = $this;
+        
         stdEvent::Reg( EVENT_LOAD, array($this,LoadContent) );
         stdEvent::Reg( EVENT_INIT, array($this,Initialize) );
         stdEvent::Reg( EVENT_DRAW, array($this,Draw) );
