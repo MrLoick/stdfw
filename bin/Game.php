@@ -25,8 +25,8 @@ Class Game extends stdGame
 
         $Sprite = new stdASprite($Miku,4,2);
         $Sprite2 = new stdSSprite($Tux);
-        $Prim = new stdEllipse(vec2(500, 300), vec2(100,50)); /* тест примитивов */
-        //pre(function_exists ( "pr2d_TriList" ));   /* проверка функций которые ты перенес, а которые нет */
+        $Prim = new stdEllipse(vec2(500, 300), vec2(100,50));
+        //pre(function_exists ( "pr2d_TriList" ));
         stdDrawing::Reg($Sprite,$Sprite2,$Prim);
     }
 

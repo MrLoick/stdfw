@@ -28,17 +28,18 @@ define ( "EVENT_DRAW", 2 + EVENT_CORE );
 define ( "EVENT_UPDATE", 3 + EVENT_CORE );
 define ( "EVENT_QUIT", 4 + EVENT_CORE );
 
+define ( "TYPE_PRIMITIVES", 0xff );
 define ( "TYPE_OBJECT",  1 );
 define ( "TYPE_SSPRITE", 2 );
 define ( "TYPE_ASPRITE", 3 );  
-define ( "TYPE_PPIXEL", 10 ); 
-define ( "TYPE_PLINE", 11 ); 
-define ( "TYPE_PRECT",  12 );  
-define ( "TYPE_PCIRCLE",  13 );
-define ( "TYPE_PELLIPSE",  14 );
+define ( "TYPE_PPIXEL", 1 + TYPE_PRIMITIVES ); 
+define ( "TYPE_PLINE", 2 + TYPE_PRIMITIVES ); 
+define ( "TYPE_PRECT",  3 + TYPE_PRIMITIVES );  
+define ( "TYPE_PCIRCLE",  4 + TYPE_PRIMITIVES );
+define ( "TYPE_PELLIPSE",  5 + TYPE_PRIMITIVES );
 
-define ( "PR2D_FILL", 0 );      //я не знаю правильно ли я сделал, но так как они не работают значит нет =)
-define ( "PR2D_SMOOTH", 1 );    //
+define ( "PR2D_FILL", 0 );
+define ( "PR2D_SMOOTH", 1 );
 
 define ( "FLAG_NONE", 0 );
 define ( "FLAG_UPDATE", 1 );
