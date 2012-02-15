@@ -32,7 +32,10 @@ class Game extends stdGame
     public function Update($DeltaTime)
     {
         global $Sprite;
-        $Sprite->X += normalize(0.1);
+        /*$Sprite->X += normalize(0.1);
+        $Sprite->Y += normalize(0.1);*/
+        $Sprite->X = mouse_x();
+        $Sprite->Y = mouse_y();
         $this->Screen->Caption = 'FPS: '.$this->FPS;
     }
 }
