@@ -19,17 +19,17 @@
 
 function vec2( $X=0, $Y=0 )
 {
-	return new Vector2($X,$Y);
+    return new Vector2($X,$Y);
 }
 
 class Vector2 extends Vector
 {
-	public $X;
-	public $Y;
-	
-	public function __construct( $X = 0, $Y = 0 )
-	{
-		$this->X = $X;
-		$this->Y = $Y;
-	}
+    public $X;
+    public $Y;
+
+    public function __construct( $X = 0, $Y = 0 )
+    {
+        $this->X = $X;
+        $this->Y = $Y;
+    }
 }
