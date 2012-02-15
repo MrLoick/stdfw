@@ -50,5 +50,6 @@ Class stdTexture extends Prototype
             stdCut($this->Id,$Width,$Height);
         $this->Size = vec2($Width,$Height);
         $this->Info();
+        return $this->Size;
     }
 }
