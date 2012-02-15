@@ -1,7 +1,6 @@
 <?
 
 /**
- * События фреймворка
  * @name StandardFramework Events System
  * @author DENFER
  * @version 1.0.0

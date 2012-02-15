@@ -1,7 +1,6 @@
 <?
 
 /**
- * Прототип объектов
  * @name StandardFramework Prototype
  * @author DENFER
  * @version 1.0.0

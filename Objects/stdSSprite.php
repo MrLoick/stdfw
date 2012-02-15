@@ -1,7 +1,6 @@
 <?
 
 /**
- * Статический объект
  * @name StandardFramework Static Sprite
  * @author DENFER
  * @version 1.0.0

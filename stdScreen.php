@@ -1,7 +1,6 @@
 <?
 
 /**
- * ”правление окном
  * @name StandardFramework Screen
  * @author DENFER
  * @version 1.0.0
