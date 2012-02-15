@@ -37,6 +37,11 @@ Class Game extends stdGame
         $Sprite->X = mouse_x();
         $Sprite->Y = mouse_y();
         $this->Screen->Caption = 'FPS: '.$this->FPS;
+        
+        if(key_down(74))
+            $Sprite->Animation->Speed -= 0.0001;
+        if(key_down(78))
+            $Sprite->Animation->Speed += 0.0001;
     }
 }
 

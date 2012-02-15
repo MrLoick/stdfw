@@ -68,12 +68,15 @@ Class stdAnimation extends Prototype
     Public Function Get_Frame( $Row = NULL, $Col = NULL )
     {
         IF( !$this->_Play ) return $this->_Frame;
-
+        
         IF( $Row != NULL )
             $this->Row = $Row;
         IF( $Col != NULL )
             $this->Col = $Col;
-
+        
+        $this->Row = Ceil( $this->Row );
+        $this->Col = Ceil( $this->Col );
+        
         IF( $this->Col > $this->TextureInfo->FramesX or $this->Col < 1 )
                 $this->Col = 1;
         IF( $this->Row > $this->TextureInfo->FramesY or $this->Row < 1 )
