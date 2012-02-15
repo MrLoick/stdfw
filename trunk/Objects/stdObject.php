@@ -1,7 +1,6 @@
 <?
 
 /**
- * Стандартный Объект
  * @name StandardFramework Object
  * @author DENFER
  * @version 1.0.0
