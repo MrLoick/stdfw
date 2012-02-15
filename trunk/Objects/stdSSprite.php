@@ -16,11 +16,8 @@ Class stdSSprite extends stdObject
     Public Function __construct(stdTexture $Texture)
     {
         parent::__construct();
-
         $this->Texture = $Texture;
-
         $Info = $Texture->Info();
-        
         $this->Size->X = $Info->Width;
         $this->Size->Y = $Info->Height;
     }
