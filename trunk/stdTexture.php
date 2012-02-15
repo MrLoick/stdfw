@@ -7,16 +7,19 @@
  * @copyright DENFER STUDIO
  */
 
-class stdTexture extends Prototype
+Class stdTexture extends Prototype
 {
-    public $Id = -1;
-
-    public function __construct( $File = null, $Background = clRed, $FX = TEX_DEFAULT_2D )
+    Public $Id = -1;
+    Public $Info = null;
+    Public $Size;
+    
+    Public Function __construct( $File = null, $Background = clRed, $FX = TEX_DEFAULT_2D )
     {
+        $this->Size = vec2();
         $this->Load($File,$Background,$FX);
     }
 
-    public function Load($File, $Background = clRed, $FX = TEX_DEFAULT_2D)
+    Public Function Load($File, $Background = clRed, $FX = TEX_DEFAULT_2D)
     {
         if(!$File) return false;
         if(file_exists($File))
@@ -25,5 +28,27 @@ class stdTexture extends Prototype
             return $this->Id;
         }
         return false;
+    }
+    
+    Public Function Info()
+    {
+        $this->Info = stdTextureInfo($this->Id);
+        return $this->Info;
+    }
+    
+    Public Function Cut($W = 4, $H = 4, $CutMethod = CUT_COUNT)
+    {
+        $Width = $W;
+        $Height = $H;
+        
+        IF( $CutMethod == CUT_COUNT )
+        {
+            $Width = Ceil ( $this->Info->Width / $W );
+            $Height = Ceil ( $this->Info->Height / $H );
+        }
+        if($this->Id > -1)
+            stdCut($this->Id,$Width,$Height);
+        $this->Size = vec2($Width,$Height);
+        $this->Info();
     }
 }

@@ -7,7 +7,7 @@
  * @copyright DENFER STUDIO
  */
 
-class Vector extends Prototype
+Class Vector extends Prototype
 {
 	
 }

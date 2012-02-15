@@ -7,22 +7,22 @@
  * @copyright DENFER STUDIO
  */
 
-abstract class stdDrawing
+Abstract Class stdDrawing
 {
-    protected static $Objects = array();
+    Protected Static $Objects = array();
 
-    public static function Add($Object)
+    Public Static Function Add($Object)
     {
         self::$Objects[] = $Object;
         return sizeof( self::$Objects ) - 1;
     }
 
-    public static function Del($Id)
+    Public Static Function Del($Id)
     {
             unset(self::$Objects[$Id]);
     }
 
-    public static function Reg()
+    Public Static Function Reg()
     {
             $ids = array();
             foreach((array)func_get_args() as $Object)
@@ -30,21 +30,23 @@ abstract class stdDrawing
             return $ids;
     }
 
-    public static function UnReg($Ids)
+    Public Static Function UnReg($Ids)
     {
         foreach((array)$Ids as $Id)
             self::Del($Id);
     }
 
-    public static function Draw($DeltaTime)
+    Public Static Function Draw($DeltaTime)
     {
         foreach(self::$Objects as $Object)
         {
+            if($Object->Visible and $Object->Texture->Id > -1)
             switch($Object->Type)
             {
-                case TYPE_SPRITE:
-                    if($Object->Visible && $Object->Texture->Id > -1)
-                        SSprite_Draw($Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX); break;
+                case TYPE_SSPRITE:
+                        SSprite_Draw( $Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX ); break;
+                case TYPE_ASPRITE:
+                        ASprite_Draw( $Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Animation->Frame, $Object->Alpha, $Object->FX ); break;
             }
 
             if($Object->Flags & FLAG_UPDATE)

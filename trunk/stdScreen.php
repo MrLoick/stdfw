@@ -7,38 +7,38 @@
  * @copyright DENFER STUDIO
  */
 
-class stdScreen extends Prototype
+Class stdScreen extends Prototype
 {
-    private $_Width = 800;
-    private $_Height = 600;
-    private $_Caption = 'Powered By StandardFramework';
+    Private $_Width = 800;
+    Private $_Height = 600;
+    Private $_Caption = 'Powered By StandardFramework';
 
-    public function Get_Caption()
+    Public Function Get_Caption()
     {
         return $this->_Caption;	
     }
 
-    public function Set_Caption($Caption)
+    Public Function Set_Caption($Caption)
     {
         stdSetCaption($Caption);	
     }
 
-    public function Get_Width()
+    Public Function Get_Width()
     {
         return $this->_Width;	
     }
 
-    public function Get_Height()
+    Public Function Get_Height()
     {
         return $this->_Height;	
     }
 
-    public function Set_Width($Width)
+    Public Function Set_Width($Width)
     {
         Screen_Set($Width, $this->_Height);	
     }
 
-    public function Set_Height($Height)
+    Public Function Set_Height($Height)
     {
         Screen_Set($this->_Width, $Height);	
     }
