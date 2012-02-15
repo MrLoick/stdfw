@@ -15,7 +15,7 @@ Abstract Class stdDrawing
     Public Static Function Add($Object)
     {
         self::$Objects[] = $Object;
-        return sizeof( self::$Objects ) - 1;
+        return count( self::$Objects ) - 1;   /* изменил sizeof на count (где-то читал что быстрее выполняется) */
     }
 
     Public Static Function Del($Id)
@@ -41,13 +41,23 @@ Abstract Class stdDrawing
     {
         foreach(self::$Objects as $Object)
         {
-            if($Object->Visible and $Object->Texture->Id > -1)
+            if($Object->Visible) //and $Object->Texture->Id > -1)  /* Убрал потому-что для отрисовки примитивов это невозможно */
             switch($Object->Type)
             {
                 case TYPE_SSPRITE:
                         SSprite_Draw( $Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX ); break;
                 case TYPE_ASPRITE:
                         ASprite_Draw( $Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Animation->Frame, $Object->Alpha, $Object->FX ); break;
+                case TYPE_PPIXEL:
+                        pr2d_Pixel( $Object->Position->X, $Object->Position->Y, $Object->Color, $Object->Alpha ); break;
+                case TYPE_PLINE:
+                        pr2d_Line( $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Color, $Object->Alpha, $Object->FX ); break;
+                case TYPE_PRECT:
+                        pr2d_Rect( $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Color, $Object->Alpha, $Object->FX ); break;
+                case TYPE_PCIRCLE:
+                        pr2d_Circle( $Object->Position->X, $Object->Position->Y, $Object->Radius, $Object->Color, $Object->Alpha, $Object->Quality, $Object->FX ); break;
+                case TYPE_PELLIPSE:
+                        pr2d_Ellipse( $Object->Position->X, $Object->Position->Y, $Object->Radius->X, $Object->Radius->Y, $Object->Color, $Object->Alpha, $Object->Quality, $Object->FX ); break;
             }
 
             if($Object->Flags & FLAG_UPDATE)
