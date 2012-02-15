@@ -12,15 +12,29 @@ abstract class stdDrawing
 {
 	protected static $Objects = array();
 	
-	public static function Reg()
+	public static function Add($Object)
 	{
-		foreach((array)func_get_args() as $Object)
-			self::$Objects[] = $Object;
+		self::$Objects[] = $Object;
+		return sizeof( self::$Objects ) - 1;
 	}
 	
-	public static function UnReg($Item)
+	public static function Del($Id)
 	{
-		unset(self::$Objects[$Item]);
+		unset(self::$Objects[$Id]);
+	}
+	
+	public static function Reg()
+	{
+		$ids = array();
+		foreach((array)func_get_args() as $Object)
+			$ids[] = self::Add($Object);
+		return $ids;
+	}
+	
+	public static function UnReg($Ids)
+	{
+		foreach((array)$Ids as $Id)
+			self::Del($Id);
 	}
 	
 	public static function Draw($DeltaTime)

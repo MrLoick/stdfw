@@ -17,7 +17,6 @@ function requireAll ( $Path = '' )
 requireAll('../Core');
 requireAll('../Utils');
 requireAll('../Vectors');
-requireAll('../Components');
 requireAll('../Objects');
 requireAll('../Props');
 requireAll('..');
