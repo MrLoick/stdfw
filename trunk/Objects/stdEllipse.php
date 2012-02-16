@@ -9,9 +9,9 @@
 
 Class stdEllipse extends stdObject
 {
-    Public $Type = TYPE_PELLIPSE;
-    public $Radius;
-    public $Quality = 32;
+    Protected $Type = TYPE_PELLIPSE;
+    Public $Radius;
+    Public $Quality = 32;
 
 
     Public Function __construct(Vector2 $Position, Vector2 $Radius,  $Color = clWhite, $Alpha = 255, $Quality = 32, $FX = FX_BLEND)

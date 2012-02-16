@@ -9,5 +9,5 @@
 
 Class stdRect extends stdLine
 {
-    Public $Type = TYPE_PRECT;
+    Protected $Type = TYPE_PRECT;
 }

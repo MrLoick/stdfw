@@ -10,10 +10,10 @@
 Class stdSSprite extends stdObject
 {
     Protected $_Type = TYPE_SSPRITE;
-
     Protected $_Flags = FLAG_DRAW;
-    
     Protected $_Texture;
+    
+    Public Function Get_Texture(){return $this->_Texture;}
 
     Public Function __construct(stdTexture $Texture)
     {
