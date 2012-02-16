@@ -26,13 +26,15 @@ Class Game extends stdGame
         $Sprite2 = new stdSSprite($Tux);
         $Prim = new stdEllipse(vec2(500, 300), vec2(100,50));
         //pre(function_exists ( "pr2d_TriList" ));
-        stdDrawing::Reg($Sprite,$Sprite2,$Prim);
+        $this->Camera->Target = $Sprite;
+        
+        stdDrawing::Reg($Sprite,$Sprite2,$Prim,$this->Camera);
     }
     
     Public Function Update($DeltaTime)
     {
         global $Sprite;
-        $this->Camera->X -= normalize(0.1);
+        //$this->Camera->X -= normalize(0.1);
         /*$Sprite->X += normalize(0.1);
         $Sprite->Y += normalize(0.1);*/
         $Sprite->X = mouse_x() + 30;
