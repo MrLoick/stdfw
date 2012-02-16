@@ -3,17 +3,12 @@
 /**
  * @name StandardFramework Object Interface
  * @author DENFER
- * @version 1.0.0
  * @copyright DENFER STUDIO
  */
 
-interface IObject
+interface IObject extends IMovable, ISizeable
 {
     Public Function Get_Type();
-    Public Function Get_Position();
-    Public Function Set_Position(Vector2 $Position);
-    Public Function Get_Size();
-    Public Function Set_Size(Vector2 $Size);
     Public Function Get_FX();
     Public Function Set_FX($FX);
     Public Function Get_Color();

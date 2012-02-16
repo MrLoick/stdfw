@@ -3,7 +3,6 @@
 /**
  * @name StandardFramework Object
  * @author DENFER
- * @version 1.0.0
  * @copyright DENFER STUDIO
  */
 
@@ -46,6 +45,14 @@ Class stdObject extends Prototype implements IObject
     Public Function Set_Height($Y){$this->Size->Y = $Y;}
     Public Function Update($DeltaTime){}
     Public Function Draw($DeltaTime){}
+    Public Function SetAngleTowardPosition(Vector2 $Position)
+    {
+        $this->_Angle = AngleTowardPos( $this->_Position->X, $this->_Position->Y, $Position->X, $Position->Y );
+    }
+    /*Public Function SetAngleTowardObject(IObject )
+    {
+        $this->_Angle = $this->SetAngleTowardPosition($Position);
+    }*/
     Public Function __construct()
     {
         $this->_Position = vec2();

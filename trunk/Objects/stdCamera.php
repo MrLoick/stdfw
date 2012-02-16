@@ -2,17 +2,22 @@
 
 /**
  * @name StandardFramework stdCamera
- * @author InlIFe
- * @version 1.0.0
+ * @author Inlife
  * @copyright DENFER STUDIO
  */
 
 Class stdCamera extends stdObject 
-{
-    
+{   
     Protected $_Type = TYPE_CAMERA;
     Protected $_Camera;
     Protected $_Scale;
+    Protected $_Target = null;
+    
+    Public Function Get_Target(){return $this->_Target;}
+    Public Function Set_Target(IMovable $Target){$this->_Target = $Target;}
+    Public Function Set_Position(Vector2 $Position){$this->_Position = $Position; $this->CameraConfig();}
+    Public Function Get_Scale(){return $this->_Scale;}
+    Public Function Set_Scale($Scale){$this->_Scale = $Scale; $this->CameraConfig();}
     
     Public Function __construct(Vector2 $Position, $Angle = 0, $Scale = 1, $Instance = null)
     {
@@ -30,17 +35,10 @@ Class stdCamera extends stdObject
         stdCamCFG($this->_Camera, $this->_Position->X, $this->_Position->Y, $this->_Angle, $this->_Scale);
     }
     
-    Public Function Set_Position(Vector2 $Position) 
+    Public Function Update($DeltaTime)
     {
-        $this->_Position = $Position;
-        $this->CameraConfig();
-    }
-    
-    Public Function Get_Scale(){return $this->_Scale;}
-    Public Function Set_Scale($Scale)
-    {
-        $this->_Scale = $Scale;
-        $this->CameraConfig();
+        IF($this->_Target)
+            $this->Position = $this->_Target;            
     }
 }
 

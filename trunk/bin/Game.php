@@ -3,7 +3,6 @@
 /**
  * @name StandardFramework Demo Game
  * @author DENFER
- * @version 1.0.0
  * @copyright DENFER STUDIO
  */
 
@@ -41,9 +40,9 @@ Class Game extends stdGame
         $this->Screen->Caption = 'FPS: '.$this->FPS;
         
         IF(key_down(74))
-            $Sprite->Animation->Speed -= 0.001;
+            $Sprite->Animation->Speed -= normalize(0.001);
         IF(key_down(78))
-            $Sprite->Animation->Speed += 0.001;
+            $Sprite->Animation->Speed += normalize(0.001);
     }
 }
 
