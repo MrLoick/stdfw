@@ -41,10 +41,10 @@ Abstract Class stdDrawing
     {
         foreach(self::$Objects as $Object)
         {
-            if($Object->Flags & FLAG_DRAW)
-                if($Object->Visible)
+            IF($Object->Flags & FLAG_DRAW)
+                IF($Object->Visible)
                     $Object->Draw($DeltaTime);
-            if($Object->Flags & FLAG_UPDATE)
+            IF($Object->Flags & FLAG_UPDATE)
                 $Object->Update($DeltaTime);
         }
     }

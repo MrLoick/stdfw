@@ -36,14 +36,14 @@ Class stdObject extends Prototype implements IObject
     Public Function Set_Visible($Visible){$this->_Visible = $Visible;}
     Public Function Get_Flags(){return $this->_Flags;}
     Public Function Set_Flags($Flags){$this->_Flags = $Flags;}
-    Public Function Get_X(){return $this->_Position->X;}
-    Public Function Get_Y(){return $this->_Position->Y;}
-    Public Function Set_X($X){$this->_Position->X = $X;}
-    Public Function Set_Y($Y){$this->_Position->Y = $Y;}
-    Public Function Get_Width(){return $this->_Size->X;}
-    Public Function Get_Height(){return $this->_Size->Y;}
-    Public Function Set_Width($X){$this->_Size->X = $X;}
-    Public Function Set_Height($Y){$this->_Size->Y = $Y;}
+    Public Function Get_X(){return $this->Position->X;}
+    Public Function Get_Y(){return $this->Position->Y;}
+    Public Function Set_X($X){$this->Position = vec2($X, $this->_Position->Y);}
+    Public Function Set_Y($Y){$this->Position = vec2($this->_Position->X, $Y);}
+    Public Function Get_Width(){return $this->Size->X;}
+    Public Function Get_Height(){return $this->Size->Y;}
+    Public Function Set_Width($X){$this->Size->X = $X;}
+    Public Function Set_Height($Y){$this->Size->Y = $Y;}
     Public Function Update($DeltaTime){}
     Public Function Draw($DeltaTime){}
     Public Function __construct()

@@ -33,15 +33,16 @@ Class Game extends stdGame
     Public Function Update($DeltaTime)
     {
         global $Sprite;
+        $this->Camera->X -= normalize(0.1);
         /*$Sprite->X += normalize(0.1);
         $Sprite->Y += normalize(0.1);*/
         $Sprite->X = mouse_x() + 30;
         $Sprite->Y = mouse_y() + 30;
         $this->Screen->Caption = 'FPS: '.$this->FPS;
         
-        if(key_down(74))
+        IF(key_down(74))
             $Sprite->Animation->Speed -= 0.001;
-        if(key_down(78))
+        IF(key_down(78))
             $Sprite->Animation->Speed += 0.001;
     }
 }

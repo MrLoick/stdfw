@@ -2,7 +2,7 @@
 
 /**
  * @name StandardFramework Primitive: Line
- * @author Inlife
+ * @author InlIFe
  * @version 1.0.0
  * @copyright DENFER STUDIO
  */
