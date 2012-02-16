@@ -7,19 +7,19 @@
  * @copyright DENFER STUDIO
  */
 
-abstract class Key
+Abstract Class Key
 {
-    public static function Down($Key) {return Key_Down($Key);}
-    public static function Up($Key) {return Key_Up($Key);}
+    Public Static Function Down($Key) {return Key_Down($Key);}
+    Public Static Function Up($Key) {return Key_Up($Key);}
 }
 
-abstract class Mouse
+Abstract Class Mouse
 {
-    public static function X() {return mouse_x();}
-    public static function Y() {return mouse_y();}
-    public static function Down($Key) {return mouse_down($Key);}
-    public static function Up($Key) {return mouse_up($Key);}
-    public static function Click($Key) {return mouse_click($Key);}
+    Public Static Function X() {return mouse_x();}
+    Public Static Function Y() {return mouse_y();}
+    Public Static Function Down($Key) {return mouse_down($Key);}
+    Public Static Function Up($Key) {return mouse_up($Key);}
+    Public Static Function Click($Key) {return mouse_click($Key);}
 }
 
 ?>
