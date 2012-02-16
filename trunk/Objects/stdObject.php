@@ -19,7 +19,17 @@ Class stdObject extends Prototype
     Private $_Color = clWhite;
     Private $_FX = FX_BLEND;
     
-    
+    Public Function Get_Type(){return $this->_Type;}
+    Public Function Get_FX(){return $this->_FX;}
+    Public Function Set_FX($FX){$this->_FX = $FX;}
+    Public Function Get_Color(){return $this->_Color;}
+    Public Function Set_Color($Color){$this->_Color = $Color;}
+    Public Function Get_Alpha(){return $this->_Alpha;}
+    Public Function Set_Alpha($Alpha){$this->_Alpha = $Alpha;}
+    Public Function Get_Angle(){return $this->_Angle;}
+    Public Function Set_Angle($Angle){$this->_Angle = $Angle;}
+    Public Function Get_Visible(){return $this->Visible;}
+    Public Function Set_Visible($Visible){$this->_Visible = $Visible;}
     Public Function Get_Flags(){return $this->_Flags;}
     Public Function Set_Flags($Flags){$this->_Flags = $Flags;}
     Public Function Get_X(){return $this->_Position->X;}
