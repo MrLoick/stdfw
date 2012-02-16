@@ -10,8 +10,8 @@
 Class stdPixel extends stdObject
 {
     Protected $_Type = TYPE_PPIXEL;
-
-
+    Protected $_Flags = FLAG_DRAW;
+    
     Public Function __construct(Vector2 $Position, $Color = clWhite, $Alpha = 255)
     {
         $this->Position = $Position;

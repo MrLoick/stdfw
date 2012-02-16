@@ -20,9 +20,9 @@ Class stdObject extends Prototype
     Protected $_FX = FX_BLEND;
     
     Public Function Get_Position(){return $this->_Position;}
-    Public Function Set_Position($Position){$this->_Position = $Position;}
+    Public Function Set_Position(Vector2 $Position){$this->_Position = $Position;}
     Public Function Get_Size(){return $this->_Size;}
-    Public Function Set_Size($Size){$this->_Size = $Size;}
+    Public Function Set_Size(Vector2 $Size){$this->_Size = $Size;}
     Public Function Get_Type(){return $this->_Type;}
     Public Function Get_FX(){return $this->_FX;}
     Public Function Set_FX($FX){$this->_FX = $FX;}
