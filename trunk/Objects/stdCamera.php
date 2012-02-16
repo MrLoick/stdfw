@@ -16,8 +16,8 @@ Class stdCamera extends stdObject
     
     Public Function Get_Target(){return $this->_Target;}
     Public Function Set_Target(IMovable $Target){$this->_Target = $Target;}
-    Public Function Set_Position(Vector2 $Position){parent::Set_Position($Position); $this->CameraConfig();}
-    Public Function Set_Angle($Angle) {parent::Set_Angle($Angle); $this->CameraConfig();}
+    Public Function Set_Position(Vector2 $Position){$this->_Position = $Position; $this->CameraConfig();}
+    Public Function Set_Angle($Angle) {$this->_Angle = $Angle; $this->CameraConfig();}
     Public Function Get_Scale(){return $this->_Scale;}
     Public Function Set_Scale($Scale){$this->_Scale = $Scale; $this->CameraConfig();}
     
