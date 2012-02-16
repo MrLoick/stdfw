@@ -46,14 +46,18 @@ Class stdObject extends Prototype implements IObject
     Public Function Get_Center(){return vec2( $this->_Position->X + ($this->_Size->X / 2), $this->_Position->Y + ($this->_Size->Y / 2) );}
     Public Function Update($DeltaTime){}
     Public Function Draw($DeltaTime){}
-    Public Function SetAngleTowardPosition(Vector2 $Position)
+    Public Function SetAngleTowardPoint( $X, $Y, $Offset = 0 )
     {
-        $this->_Angle = AngleTowardPos( $this->_Position->X, $this->_Position->Y, $Position->X, $Position->Y );
+        $this->_Angle = AngleTowardPos( $this->_Position->X, $this->_Position->Y, $X, $Y ) + $Offset;
     }
-    /*Public Function SetAngleTowardObject(IObject )
+    Public Function SetAngleTowardPosition( Vector2 $Position, $Offset = 0 )
     {
-        $this->_Angle = $this->SetAngleTowardPosition($Position);
-    }*/
+        $this->SetAngleTowardPoint( $Position->X, $Position->Y, $Offset );
+    }
+    Public Function SetAngleTowardObject( IMovable $Object, $Offset = 0 )
+    {
+        $this->SetAngleTowardPoint( $Object->Position->X, $Object->Position->Y, $Offset );
+    }
     Public Function __construct()
     {
         $this->_Position = vec2();
