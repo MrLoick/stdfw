@@ -40,9 +40,9 @@ Class Game extends stdGame
         $this->Screen->Caption = 'FPS: '.$this->FPS;
         
         if(key_down(74))
-            $Sprite->Animation->Speed -= 0.0001;
+            $Sprite->Animation->Speed -= 0.001;
         if(key_down(78))
-            $Sprite->Animation->Speed += 0.0001;
+            $Sprite->Animation->Speed += 0.001;
     }
 }
 
