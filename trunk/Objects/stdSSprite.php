@@ -9,11 +9,11 @@
 
 Class stdSSprite extends stdObject
 {
-    Public $Type = TYPE_SSPRITE;
+    Protected $_Type = TYPE_SSPRITE;
 
-    Public $Flags = FLAG_DRAW;
+    Protected $_Flags = FLAG_DRAW;
     
-    Public $Texture;
+    Protected $_Texture;
 
     Public Function __construct(stdTexture $Texture)
     {

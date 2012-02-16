@@ -9,9 +9,9 @@
 
 Class stdASprite extends stdSSprite
 {
-    Public $Type = TYPE_ASPRITE;
+    Protected $_Type = TYPE_ASPRITE;
     
-    Public $Flags = FLAG_DRAW;
+    Protected $_Flags = FLAG_DRAW;
     
     Public $Animation;
     
@@ -24,6 +24,6 @@ Class stdASprite extends stdSSprite
     
     Public Function Draw($DeltaTime)
     {
-        ASprite_Draw( $this->Texture->Id, $this->Position->X, $this->Position->Y, $this->Size->X, $this->Size->Y, $this->Angle, $this->Animation->Frame, $this->Alpha, $this->FX );
+        ASprite_Draw( $this->Texture->Id, $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Angle, $this->Animation->Frame, $this->_Alpha, $this->_FX );
     }
 }
