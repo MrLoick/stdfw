@@ -53,8 +53,18 @@ Class Prototype
         return $Array;
     }
     
-    Public Function toString($Object = null)
+    Public Function toString($Object = null,$Index=T)
     {
-        //ForEach($)
+        $String = '';
+        IF(!$Object)
+            $Object = $this->toArray();
+        ForEach( $Object As $Key => $Value )
+        {
+            IF(is_array($Value))
+                $String .= $Index.'['.$Key.']:'.RN.$this->toString($Value,$Index.$Index).RN;
+            ELSE
+                $String .= $Index.$Key . ': ' . $Value.RN;
+        }
+        return $String;
     }
 }

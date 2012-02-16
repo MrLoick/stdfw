@@ -28,7 +28,7 @@ Class Game extends stdGame
         //pre(function_exists ( "pr2d_TriList" ));
         $this->Camera->Target = $Sprite;
         
-        pre($Sprite->toArray());
+        pre($this->Camera->toString());
         
         $Point[0] = new stdCircle(vec2(0,0), 5);
         $Point[1] = new stdCircle(vec2(0,0), 5);
