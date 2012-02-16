@@ -6,7 +6,7 @@
  * @copyright DENFER STUDIO
  */
 
-interface IMovable
+Interface IMovable
 {
     Public Function Get_Position();
     Public Function Set_Position(Vector2 $Position);
