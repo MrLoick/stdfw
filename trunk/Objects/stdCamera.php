@@ -4,15 +4,16 @@
  * @name StandardFramework stdCamera
  * @author Inlife
  * @version 1.0.0
- * @copyright Inlife Software
+ * @copyright DENFER STUDIO
  */
-class stdCamera extends stdObject {
+
+Class stdCamera extends stdObject {
     
-    protected $_Type = TYPE_CAMERA;
-    protected $_Camera;
-    protected $_Scale;
+    Protected $_Type = TYPE_CAMERA;
+    Protected $_Camera;
+    Protected $_Scale;
     
-    public function __construct(Vector2 $Position, $Angle = 0, $Scale = 1)
+    Public Function __construct(Vector2 $Position, $Angle = 0, $Scale = 1)
     {
         $this->_Position = $Position;
         $this->_Angle = $Angle;
@@ -20,19 +21,19 @@ class stdCamera extends stdObject {
         $this->_Camera = stdCam($Position->X, $Position->Y, $Angle, $Scale);
     }
     
-    protected function CameraConfig()
+    Protected Function CameraConfig()
     {
         stdCamCFG($this->Camera, $this->_Position->X, $this->_Position->Y, $this->_Angle, $this->_Scale);
     }
     
-    public function Set_Position($Position) 
+    Public Function Set_Position($Position) 
     {
         $this->_Position = $Position;
         $this->CameraCofing();
     }
     
-    public function Get_Scale(){return $this->_Scale;}
-    public function Set_Scale($Scale)
+    Public Function Get_Scale(){return $this->_Scale;}
+    Public Function Set_Scale($Scale)
     {
         $this->_Scale = $Scale;
         $this->CameraCofing();
