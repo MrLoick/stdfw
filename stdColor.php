@@ -6,34 +6,34 @@
  * @copyright DENFER STUDIO
  */
 
-Function HexToRGB($hex) 
+Function HEX2RGB($HEX) 
 {
-        $hex = ereg_replace("0x", "", $hex);
-        $color = array();
+        $HEX = ereg_replace("0x", "", $HEX);
+        $color = Array();
 
-        IF(strlen($hex) == 3) {
-                $color['r'] = hexdec(substr($hex, 0, 1));
-                $color['g'] = hexdec(substr($hex, 1, 1));
-                $color['b'] = hexdec(substr($hex, 2, 1));
+        IF(strlen($HEX) == 3) {
+                $color['r'] = HEXdec(substr($HEX, 0, 1));
+                $color['g'] = HEXdec(substr($HEX, 1, 1));
+                $color['b'] = HEXdec(substr($HEX, 2, 1));
         }
-        ELSE IF(strlen($hex) == 6) {
-                $color['r'] = hexdec(substr($hex, 0, 2));
-                $color['g'] = hexdec(substr($hex, 2, 2));
-                $color['b'] = hexdec(substr($hex, 4, 2));
+        ElseIF(strlen($HEX) == 6) {
+                $color['r'] = HEXdec(substr($HEX, 0, 2));
+                $color['g'] = HEXdec(substr($HEX, 2, 2));
+                $color['b'] = HEXdec(substr($HEX, 4, 2));
         }
 
         Return $color;
 }
 
-Function HexToCmyk($hex)
+Function HEX2CMYK($HEX)
 {
-    return Rgb2Cmyk(HexToRGB($hex));
+    return RGB2CMYK(HEX2RGB($HEX));
 }
 
-Function HexToHSV($hex)
+Function HEX2HSV($HEX)
 {
-    $rgb = HexToRgb($hex);
-    list($r, $g, $b) = $rgb;
+    $RGB = HEX2RGB($HEX);
+    list($r, $g, $b) = $RGB;
     $r = $r/255;
     $g = $g/255;
     $b = $b/255;
@@ -49,7 +49,7 @@ Function HexToHSV($hex)
     $v = $max;
 
 
-    if($r == 0){
+    IF($r == 0){
         $h = 0;
         $s = 0;
     }
@@ -60,19 +60,19 @@ Function HexToHSV($hex)
         $hg = ((($max - $g) / 6) + ($r / 2)) / $r;
         $hb = ((($max - $b) / 6) + ($r / 2)) / $r;
 
-        if ($r == $max) $h = $hb - $hg;
-        else if($g == $max) $h = (1/3) + $hr - $hb;
-        else if ($b == $max) $h = (2/3) + $hg - $hr;
+        IF ($r == $max) $h = $hb - $hg;
+        ElseIF($g == $max) $h = (1/3) + $hr - $hb;
+        ElseIF ($b == $max) $h = (2/3) + $hg - $hr;
 
-        if ($h < 0)$h += 1;
-        if ($h > 1)$h -= 1;
+        IF ($h < 0)$h += 1;
+        IF ($h > 1)$h -= 1;
     }
-    return array($h, $s, $v);
+    return Array($h, $s, $v);
 }
 
-Function Rgb2Cmyk($var1,$g=0,$b=0) 
+Function RGB2CMYK($var1,$g=0,$b=0) 
 {
-   if (is_array($var1)) {
+   IF (is_Array($var1)) {
       $r = $var1['r'];
       $g = $var1['g'];
       $b = $var1['b'];
@@ -86,68 +86,64 @@ Function Rgb2Cmyk($var1,$g=0,$b=0)
    $cyan    = @(($cyan    - $black) / (255 - $black)) * 255;
    $magenta = @(($magenta - $black) / (255 - $black)) * 255;
    $yellow  = @(($yellow  - $black) / (255 - $black)) * 255;
-   return array('c' => $cyan / 255,
+   return Array('c' => $cyan / 255,
                 'm' => $magenta / 255,
                 'y' => $yellow / 255,
                 'k' => $black / 255);
 }
 
 Function HSV($H,$S,$V) {
-    //1
     $H *= 6;
-    //2
     $I = floor($H);
     $F = $H - $I;
-    //3
     $M = $V * (1 - $S);
     $N = $V * (1 - $S * $F);
     $K = $V * (1 - $S * (1 - $F));
-    //4
     switch ($I) {
         case 0:
-            list($R,$G,$B) = array($V,$K,$M);
+            list($R,$G,$B) = Array($V,$K,$M);
             break;
         case 1:
-            list($R,$G,$B) = array($N,$V,$M);
+            list($R,$G,$B) = Array($N,$V,$M);
             break;
         case 2:
-            list($R,$G,$B) = array($M,$V,$K);
+            list($R,$G,$B) = Array($M,$V,$K);
             break;
         case 3:
-            list($R,$G,$B) = array($M,$N,$V);
+            list($R,$G,$B) = Array($M,$N,$V);
             break;
         case 4:
-            list($R,$G,$B) = array($K,$M,$V);
+            list($R,$G,$B) = Array($K,$M,$V);
             break;
         case 5:
-        case 6: //for when $H=1 is given
-            list($R,$G,$B) = array($V,$M,$N);
+        case 6:
+            list($R,$G,$B) = Array($V,$M,$N);
             break;
     }
-    return Rgb($R, $G, $B);
+    return RGB($R, $G, $B);
 }
 
-Function Rgb($R, $G, $B) 
+Function RGB($R, $G, $B) 
 {
-        $hex = "0x";
-        $hex.= str_pad(dechex($R), 2, "0", STR_PAD_LEFT);
-        $hex.= str_pad(dechex($G), 2, "0", STR_PAD_LEFT);
-        $hex.= str_pad(dechex($B), 2, "0", STR_PAD_LEFT);
+        $HEX = "0x";
+        $HEX.= str_pad(decHEX($R), 2, "0", STR_PAD_LEFT);
+        $HEX.= str_pad(decHEX($G), 2, "0", STR_PAD_LEFT);
+        $HEX.= str_pad(decHEX($B), 2, "0", STR_PAD_LEFT);
 
-        Return $hex;
+        Return $HEX;
 }
 
-Function Cmyk($c, $m, $y, $k)
+Function CMYK($c, $m, $y, $k)
 {
     $r = 255 - round(2.55 * ($c+$k)) ;
     $g = 255 - round(2.55 * ($m+$k)) ;
     $b = 255 - round(2.55 * ($y+$k)) ;
 
-    if($r<0) $r = 0 ;
-    if($g<0) $g = 0 ;
-    if($b<0) $b = 0 ;
+    IF($r<0) $r = 0 ;
+    IF($g<0) $g = 0 ;
+    IF($b<0) $b = 0 ;
 
-    return Rgb($r, $g, $b);
+    return RGB($r, $g, $b);
 } 
 
 ?>
