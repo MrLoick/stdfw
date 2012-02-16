@@ -27,6 +27,7 @@ Class stdObject extends Prototype
     Public $Color = clWhite;
     Public $FX = FX_BLEND;
     Public Function Update($DeltaTime){}
+    Public Function Draw($DeltaTime){}
     Public Function __construct()
     {
         $this->Position = vec2();
