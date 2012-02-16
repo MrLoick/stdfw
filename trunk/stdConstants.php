@@ -7,54 +7,54 @@
  * @copyright DENFER STUDIO
  */
 
-define ( "INFINITY", 1e+1000 );
+DEFINE ( "INFINITY", 1e+1000 );
 
-define ( "nil", null );
+DEFINE ( "nil", null );
 
-define ( "TEX_DEFAULT_2D", 1074 );
+DEFINE ( "TEX_DEFAULT_2D", 1074 );
 
-define ( "SCREEN_WIDTH", 1 );
-define ( "SCREEN_HEIGHT", 2 );
+DEFINE ( "SCREEN_WIDTH", 1 );
+DEFINE ( "SCREEN_HEIGHT", 2 );
 
-define ( "DEFAULT_INDEX", 0 );
+DEFINE ( "DEFAULT_INDEX", 0 );
 
-define ( "MAIN_CAM", DEFAULT_INDEX );
-define ( "MAIN_SPACE", DEFAULT_INDEX );
+DEFINE ( "MAIN_CAM", DEFAULT_INDEX );
+DEFINE ( "MAIN_SPACE", DEFAULT_INDEX );
 
-define ( "EVENT_CORE", 0xff );
-define ( "EVENT_INIT", 0 + EVENT_CORE );
-define ( "EVENT_LOAD", 1 + EVENT_CORE );
-define ( "EVENT_DRAW", 2 + EVENT_CORE );
-define ( "EVENT_UPDATE", 3 + EVENT_CORE );
-define ( "EVENT_QUIT", 4 + EVENT_CORE );
+DEFINE ( "EVENT_CORE", 0xff );
+DEFINE ( "EVENT_INIT", 0 + EVENT_CORE );
+DEFINE ( "EVENT_LOAD", 1 + EVENT_CORE );
+DEFINE ( "EVENT_DRAW", 2 + EVENT_CORE );
+DEFINE ( "EVENT_UPDATE", 3 + EVENT_CORE );
+DEFINE ( "EVENT_QUIT", 4 + EVENT_CORE );
 
-define ( "TYPE_PRIMITIVES", 0xff );
-define ( "TYPE_OBJECT",  1 );
-define ( "TYPE_SSPRITE", 2 );
-define ( "TYPE_ASPRITE", 3 );
-define ( "TYPE_TEXT", 4 );
-define ( "TYPE_CAMERA", 5);
-define ( "TYPE_PPIXEL", 1 + TYPE_PRIMITIVES ); 
-define ( "TYPE_PLINE", 2 + TYPE_PRIMITIVES ); 
-define ( "TYPE_PRECT",  3 + TYPE_PRIMITIVES ); 
-define ( "TYPE_PCIRCLE",  4 + TYPE_PRIMITIVES );
-define ( "TYPE_PELLIPSE",  5 + TYPE_PRIMITIVES );
+DEFINE ( "TYPE_PRIMITIVES", 0xff );
+DEFINE ( "TYPE_OBJECT",  1 );
+DEFINE ( "TYPE_SSPRITE", 2 );
+DEFINE ( "TYPE_ASPRITE", 3 );
+DEFINE ( "TYPE_TEXT", 4 );
+DEFINE ( "TYPE_CAMERA", 5);
+DEFINE ( "TYPE_PPIXEL", 1 + TYPE_PRIMITIVES ); 
+DEFINE ( "TYPE_PLINE", 2 + TYPE_PRIMITIVES ); 
+DEFINE ( "TYPE_PRECT",  3 + TYPE_PRIMITIVES ); 
+DEFINE ( "TYPE_PCIRCLE",  4 + TYPE_PRIMITIVES );
+DEFINE ( "TYPE_PELLIPSE",  5 + TYPE_PRIMITIVES );
 
-define ( "PR2D_FILL", 65536 );
-define ( "PR2D_SMOOTH", 131072 );
+DEFINE ( "PR2D_FILL", 65536 );
+DEFINE ( "PR2D_SMOOTH", 131072 );
 
-define ( "FLAG_NONE", 0 );
-define ( "FLAG_UPDATE", 1 );
-define ( "FLAG_DRAW", 2 );
+DEFINE ( "FLAG_NONE", 0 );
+DEFINE ( "FLAG_UPDATE", 1 );
+DEFINE ( "FLAG_DRAW", 2 );
 
-define ( "FX_BLEND_NORMAL", 0 );
-define ( "FX_BLEND_ADD", 1 );
-define ( "FX_BLEND_MULT", 2 );
-define ( "FX_BLEND_BLACK", 3 );
-define ( "FX_BLEND_WHITE", 4 );
-define ( "FX_BLEND_MASK", 5 );
-define ( "FX_BLEND", 1048576 );
-define ( "FX_COLOR", 2097152 );
+DEFINE ( "FX_BLEND_NORMAL", 0 );
+DEFINE ( "FX_BLEND_ADD", 1 );
+DEFINE ( "FX_BLEND_MULT", 2 );
+DEFINE ( "FX_BLEND_BLACK", 3 );
+DEFINE ( "FX_BLEND_WHITE", 4 );
+DEFINE ( "FX_BLEND_MASK", 5 );
+DEFINE ( "FX_BLEND", 1048576 );
+DEFINE ( "FX_COLOR", 2097152 );
 
-define ( "CUT_COUNT", 1 );
-define ( "CUT_SIZE", 2 );
+DEFINE ( "CUT_COUNT", 1 );
+DEFINE ( "CUT_SIZE", 2 );

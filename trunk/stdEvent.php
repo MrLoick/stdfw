@@ -20,7 +20,7 @@ Abstract Class stdEvent
     Public Static Function Call ($Event, $Arguments = array())
     {
         foreach((array)self::$Events[$Event] as $Func)
-                if(is_callable($Func))
+                IF(is_callable($Func))
                         @call_user_func_array($Func, $Arguments);
     }
 }

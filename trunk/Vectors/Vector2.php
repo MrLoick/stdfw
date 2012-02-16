@@ -17,7 +17,7 @@
  *
  */
 
-Function vec2( $X=0, $Y=0 )
+Function vec2( $X = 0, $Y = 0 )
 {
     return new Vector2($X,$Y);
 }

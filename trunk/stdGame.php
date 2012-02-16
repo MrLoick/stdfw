@@ -12,7 +12,8 @@ Class stdGame extends Prototype
     Public $Physics = false;
     Public $VSync = false;
     Public $FullScreen = false;
-
+    
+    Public $Camera;
     Public $Screen;
 
     Public Function Get_FPS()
@@ -22,8 +23,9 @@ Class stdGame extends Prototype
 
     Public Function __construct()
     {
+        $this->Camera = new stdCamera( vec2(), 0, 1, MAIN_CAM );
         $this->Screen = new stdScreen;
-
+        
         stdDrawing::$Game = $this;
         
         stdEvent::Reg( EVENT_LOAD, array($this,LoadContent) );
@@ -40,7 +42,7 @@ Class stdGame extends Prototype
     Public Function Update($DeltaTime){}
     Public Function DefaultUpdate($DeltaTime)
     {
-        if($this->Physics)
+        IF($this->Physics)
             cpSpaceStep(MAIN_SPACE, normalize(0.002));
     }
     Public Function Quit(){}

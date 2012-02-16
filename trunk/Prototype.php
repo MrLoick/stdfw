@@ -12,18 +12,18 @@ Class Prototype
     Public Function __get($Key)
     {
         $Property = array($this,'Get_'.$Key);
-        if(is_callable($Property))
+        IF(is_callable($Property))
             return call_user_func($Property);
-        else
+        ELSE
             return $this->{$Key};
     }
 
     Public Function __set($Key, $Value)
     {
         $Property = array($this,'Set_'.$Key);
-        if(is_callable($Property))
+        IF(is_callable($Property))
             call_user_func($Property, $Value);
-        else
+        ELSE
             $this->{$Key} = $Value;
     }
 }

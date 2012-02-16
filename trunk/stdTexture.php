@@ -21,8 +21,8 @@ Class stdTexture extends Prototype
 
     Public Function Load($File, $Background = clRed, $FX = TEX_DEFAULT_2D)
     {
-        if(!$File) return false;
-        if(file_exists($File))
+        IF(!$File) return false;
+        IF(file_exists($File))
         {
             $this->Id = stdLoadTexture($File, $Background, $FX);
             return $this->Id;
@@ -46,7 +46,7 @@ Class stdTexture extends Prototype
             $Width = Ceil ( $this->Info->Width / $W );
             $Height = Ceil ( $this->Info->Height / $H );
         }
-        if($this->Id > -1)
+        IF($this->Id > -1)
             stdCut($this->Id,$Width,$Height);
         $this->Size = vec2($Width,$Height);
         $this->Info();

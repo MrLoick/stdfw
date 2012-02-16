@@ -2,7 +2,7 @@
 
 /**
  * @name StandardFramework Primitive: Pixel
- * @author Inlife
+ * @author InlIFe
  * @version 1.0.0
  * @copyright DENFER STUDIO
  */
