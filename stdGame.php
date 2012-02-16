@@ -30,6 +30,7 @@ Class stdGame extends Prototype
         stdEvent::Reg( EVENT_INIT, array($this,Initialize) );
         stdEvent::Reg( EVENT_DRAW, array($this,Draw) );
         stdEvent::Reg( EVENT_UPDATE, array($this,Update) );
+        stdEvent::Reg( EVENT_UPDATE, array($this,DefaultUpdate) );
         stdEvent::Reg( EVENT_QUIT, array($this,Quit) );
     }
 
@@ -37,6 +38,11 @@ Class stdGame extends Prototype
     Public Function Initialize(){}
     Public Function Draw($DeltaTime){}
     Public Function Update($DeltaTime){}
+    Public Function DefaultUpdate($DeltaTime)
+    {
+        if($this->Physics)
+            cpSpaceStep(MAIN_SPACE, normalize(0.002));
+    }
     Public Function Quit(){}
 
     Public Function Run()

@@ -15,7 +15,7 @@ Class Game extends stdGame
         $Miku = new stdTexture('Content/player.png');
         $Tux = new stdTexture('Content/tux.png');
     }
-
+    
     Public Function Initialize()
     {
         global $Miku, $Tux, $Sprite;
@@ -29,7 +29,7 @@ Class Game extends stdGame
         //pre(function_exists ( "pr2d_TriList" ));
         stdDrawing::Reg($Sprite,$Sprite2,$Prim);
     }
-
+    
     Public Function Update($DeltaTime)
     {
         global $Sprite;
