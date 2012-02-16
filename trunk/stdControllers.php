@@ -1,9 +1,8 @@
-<?php
+<?
 
 /**
- * @name StandardFramework stdControllers
+ * @name StandardFramework Controllers
  * @author Inlife
- * @version 1.0.0
  * @copyright DENFER STUDIO
  */
 
@@ -21,5 +20,3 @@ Abstract Class Mouse
     Public Static Function Up($Key) {return mouse_up($Key);}
     Public Static Function Click($Key) {return mouse_click($Key);}
 }
-
-?>
