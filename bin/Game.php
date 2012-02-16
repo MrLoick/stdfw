@@ -12,7 +12,7 @@ Class Game extends stdGame
     Public Function LoadContent()
     {
         global $Miku, $Tux;
-        $Miku = new stdTexture('Content/miku.png');
+        $Miku = new stdTexture('Content/player.png');
         $Tux = new stdTexture('Content/tux.png');
     }
 
@@ -23,7 +23,7 @@ Class Game extends stdGame
         stdMaxFPS(true);
         $this->Screen->Caption = 'My firts game.';
 
-        $Sprite = new stdASprite($Miku,4,2);
+        $Sprite = new stdASprite($Miku,4,4);
         $Sprite2 = new stdSSprite($Tux);
         $Prim = new stdEllipse(vec2(500, 300), vec2(100,50));
         //pre(function_exists ( "pr2d_TriList" ));
@@ -35,8 +35,8 @@ Class Game extends stdGame
         global $Sprite;
         /*$Sprite->X += normalize(0.1);
         $Sprite->Y += normalize(0.1);*/
-        $Sprite->X = mouse_x();
-        $Sprite->Y = mouse_y();
+        $Sprite->X = mouse_x() + 30;
+        $Sprite->Y = mouse_y() + 30;
         $this->Screen->Caption = 'FPS: '.$this->FPS;
         
         if(key_down(74))
