@@ -6,13 +6,11 @@
  * @copyright DENFER STUDIO
  */
 
-interface IObject extends IMovable, ISizeable
+Interface IObject extends IMovable, ISizeable, IColorable
 {
     Public Function Get_Type();
     Public Function Get_FX();
     Public Function Set_FX($FX);
-    Public Function Get_Color();
-    Public Function Set_Color($Color);
     Public Function Get_Alpha();
     Public Function Set_Alpha($Alpha);
     Public Function Get_Angle();
