@@ -9,15 +9,15 @@
 
 Class stdObject extends Prototype
 {
-    Private $_Type = TYPE_OBJECT;
-    Private $_Flags = FLAG_NONE;
-    Private $_Visible = true;
-    Private $_Position;
-    Private $_Size;
-    Private $_Angle = 0;
-    Private $_Alpha = 255;
-    Private $_Color = clWhite;
-    Private $_FX = FX_BLEND;
+    Protected $_Type = TYPE_OBJECT;
+    Protected $_Flags = FLAG_NONE;
+    Protected $_Visible = true;
+    Protected $_Position;
+    Protected $_Size;
+    Protected $_Angle = 0;
+    Protected $_Alpha = 255;
+    Protected $_Color = clWhite;
+    Protected $_FX = FX_BLEND;
     
     Public Function Get_Type(){return $this->_Type;}
     Public Function Get_FX(){return $this->_FX;}
