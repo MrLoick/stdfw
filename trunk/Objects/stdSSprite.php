@@ -21,4 +21,9 @@ Class stdSSprite extends stdObject
         $this->Size->X = $Info->Width;
         $this->Size->Y = $Info->Height;
     }
+    
+    Public Function Draw($DeltaTime)
+    {
+        SSprite_Draw( $this->Texture->Id, $this->Position->X, $this->Position->Y, $this->Size->X, $this->Size->Y, $this->Angle, $this->Alpha, $this->FX );
+    }
 }

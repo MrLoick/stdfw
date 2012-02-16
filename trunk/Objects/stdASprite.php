@@ -19,4 +19,9 @@ Class stdASprite extends stdSSprite
         $this->Size = $Texture->Cut($W,$H,$CutMethod);
         $this->Animation = new stdAnimation($Texture);
     }
+    
+    Public Function Draw($DeltaTime)
+    {
+        ASprite_Draw( $this->Texture->Id, $this->Position->X, $this->Position->Y, $this->Size->X, $this->Size->Y, $this->Angle, $this->Animation->Frame, $this->Alpha, $this->FX );
+    }
 }

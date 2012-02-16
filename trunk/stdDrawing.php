@@ -42,7 +42,8 @@ Abstract Class stdDrawing
         foreach(self::$Objects as $Object)
         {
             if($Object->Visible)
-            switch($Object->Type)
+                $Object->Draw();
+            /*switch($Object->Type)
             {
                 case TYPE_SSPRITE:
                     SSprite_Draw( $Object->Texture->Id, $Object->Position->X, $Object->Position->Y, $Object->Size->X, $Object->Size->Y, $Object->Angle, $Object->Alpha, $Object->FX ); break;
@@ -58,7 +59,7 @@ Abstract Class stdDrawing
                     pr2d_Circle( $Object->Position->X, $Object->Position->Y, $Object->Radius, $Object->Color, $Object->Alpha, $Object->Quality, $Object->FX ); break;
                 case TYPE_PELLIPSE:
                     pr2d_Ellipse( $Object->Position->X, $Object->Position->Y, $Object->Radius->X, $Object->Radius->Y, $Object->Color, $Object->Alpha, $Object->Quality, $Object->FX ); break;
-            }
+            }*/
             if($Object->Flags & FLAG_UPDATE)
                 $Object->Update($DeltaTime);
         }
