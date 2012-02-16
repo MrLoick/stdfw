@@ -23,7 +23,7 @@ Class stdCamera extends stdObject {
     
     Protected Function CameraConfig()
     {
-        stdCamCFG($this->Camera, $this->_Position->X, $this->_Position->Y, $this->_Angle, $this->_Scale);
+        stdCamCFG($this->_Camera, $this->_Position->X, $this->_Position->Y, $this->_Angle, $this->_Scale);
     }
     
     Public Function Set_Position($Position) 
