@@ -48,7 +48,8 @@ Class stdObject extends Prototype implements IObject
     Public Function Draw($DeltaTime){}
     Public Function SetAngleTowardPoint( $X, $Y, $Offset = 0 )
     {
-        $this->_Angle = AngleTowardPos( $this->_Position->X, $this->_Position->Y, $X, $Y ) + $Offset;
+        $Center = $this->Center;
+        $this->_Angle = AngleTowardPos( $Center->X, $Center->Y, $X, $Y ) + $Offset;
     }
     Public Function SetAngleTowardPosition( Vector2 $Position, $Offset = 0 )
     {
@@ -56,7 +57,8 @@ Class stdObject extends Prototype implements IObject
     }
     Public Function SetAngleTowardObject( IMovable $Object, $Offset = 0 )
     {
-        $this->SetAngleTowardPoint( $Object->Position->X, $Object->Position->Y, $Offset );
+        $Center = $Object->Center;
+        $this->SetAngleTowardPoint( $Center->X, $Center->Y, $Offset );
     }
     Public Function __construct()
     {
