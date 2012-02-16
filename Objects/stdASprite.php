@@ -9,7 +9,6 @@
 Class stdASprite extends stdSSprite
 {
     Protected $_Type = TYPE_ASPRITE;
-    Protected $_Flags = FLAG_DRAW;
     Public $Animation;
     
     Public Function __construct(stdTexture $Texture, $W=4, $H=4, $CutMethod = CUT_COUNT)
