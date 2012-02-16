@@ -17,7 +17,7 @@ Class Game extends stdGame
     
     Public Function Initialize()
     {
-        global $Miku, $Tux, $Sprite;
+        global $Miku, $Tux, $Sprite, $Sprite2;
 
         stdMaxFPS(true);
         $this->Screen->Caption = 'My firts game.';
@@ -33,13 +33,15 @@ Class Game extends stdGame
     
     Public Function Update($DeltaTime)
     {
-        global $Sprite;
+        global $Sprite, $Sprite2;
         //$this->Camera->X -= normalize(0.1);
         /*$Sprite->X += normalize(0.1);
         $Sprite->Y += normalize(0.1);*/
         $Sprite->X = mouse_x() + 30;
         $Sprite->Y = mouse_y() + 30;
         $this->Screen->Caption = 'FPS: '.$this->FPS;
+        
+        $Sprite->SetAngleTowardObject($Sprite2);
         
         IF(key_down(74))
             $Sprite->Animation->Speed -= normalize(0.001);
