@@ -13,6 +13,12 @@ DEFINE ( "nil", null );
 DEFINE ( "SCREEN_WIDTH", 1 );
 DEFINE ( "SCREEN_HEIGHT", 2 );
 
+DEFINE ( "R", "\r" );
+DEFINE ( "N", "\n" );
+DEFINE ( "RN", R.N );
+
+DEFINE ( "T", "\t  " );
+
 DEFINE ( "DEFAULT_INDEX", 0 );
 
 DEFINE ( "MAIN_CAM", DEFAULT_INDEX );
