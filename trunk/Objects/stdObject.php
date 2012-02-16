@@ -28,7 +28,7 @@ Class stdObject extends Prototype
     Public Function Set_Alpha($Alpha){$this->_Alpha = $Alpha;}
     Public Function Get_Angle(){return $this->_Angle;}
     Public Function Set_Angle($Angle){$this->_Angle = $Angle;}
-    Public Function Get_Visible(){return $this->Visible;}
+    Public Function Get_Visible(){return $this->_Visible;}
     Public Function Set_Visible($Visible){$this->_Visible = $Visible;}
     Public Function Get_Flags(){return $this->_Flags;}
     Public Function Set_Flags($Flags){$this->_Flags = $Flags;}

@@ -18,14 +18,14 @@ Class stdSSprite extends stdObject
     Public Function __construct(stdTexture $Texture)
     {
         parent::__construct();
-        $this->Texture = $Texture;
+        $this->_Texture = $Texture;
         $Info = $Texture->Info();
-        $this->Size->X = $Info->Width;
-        $this->Size->Y = $Info->Height;
+        $this->_Size->X = $Info->Width;
+        $this->_Size->Y = $Info->Height;
     }
     
     Public Function Draw($DeltaTime)
     {
-        SSprite_Draw( $this->Texture->Id, $this->Position->X, $this->Position->Y, $this->Size->X, $this->Size->Y, $this->Angle, $this->Alpha, $this->FX );
+        SSprite_Draw( $this->_Texture->Id, $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Angle, $this->_Alpha, $this->_FX );
     }
 }
