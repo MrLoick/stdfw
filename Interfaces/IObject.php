@@ -27,4 +27,5 @@ Interface IObject extends IMovable, ISizeable, IColorable
     Public Function Get_Height();
     Public Function Set_Width($X);
     Public Function Set_Height($Y);
+    Public Function Get_Center();
 }
