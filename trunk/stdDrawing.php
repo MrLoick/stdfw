@@ -41,8 +41,9 @@ Abstract Class stdDrawing
     {
         foreach(self::$Objects as $Object)
         {
-            if($Object->Visible)
-                $Object->Draw();
+            if($Object->Flags & FLAG_DRAW)
+                if($Object->Visible)
+                    $Object->Draw();
             /*switch($Object->Type)
             {
                 case TYPE_SSPRITE:

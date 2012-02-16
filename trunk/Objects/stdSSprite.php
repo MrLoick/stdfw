@@ -11,6 +11,8 @@ Class stdSSprite extends stdObject
 {
     Public $Type = TYPE_SSPRITE;
 
+    Public $Flags = FLAG_DRAW;
+    
     Public $Texture;
 
     Public Function __construct(stdTexture $Texture)

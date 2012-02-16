@@ -39,11 +39,12 @@ define ( "TYPE_PRECT",  3 + TYPE_PRIMITIVES );
 define ( "TYPE_PCIRCLE",  4 + TYPE_PRIMITIVES );
 define ( "TYPE_PELLIPSE",  5 + TYPE_PRIMITIVES );
 
-define ( "PR2D_FILL", 65536 );              
-define ( "PR2D_SMOOTH", 131072 );                
+define ( "PR2D_FILL", 65536 );
+define ( "PR2D_SMOOTH", 131072 );
 
 define ( "FLAG_NONE", 0 );
 define ( "FLAG_UPDATE", 1 );
+define ( "FLAG_DRAW", 2 );
 
 define ( "FX_BLEND_NORMAL", 0 );
 define ( "FX_BLEND_ADD", 1 );
