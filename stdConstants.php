@@ -32,10 +32,10 @@ define ( "TYPE_PRIMITIVES", 0xff );
 define ( "TYPE_OBJECT",  1 );
 define ( "TYPE_SSPRITE", 2 );
 define ( "TYPE_ASPRITE", 3 );
-define ( "TYPE_TEXT", 4 );                            //start adding text
-define ( "TYPE_PPIXEL", 1 + TYPE_PRIMITIVES ); 
-define ( "TYPE_PLINE", 2 + TYPE_PRIMITIVES ); 
-define ( "TYPE_PRECT",  3 + TYPE_PRIMITIVES );  
+define ( "TYPE_TEXT", 4 );
+define ( "TYPE_PPIXEL", 1 + TYPE_PRIMITIVES );
+define ( "TYPE_PLINE", 2 + TYPE_PRIMITIVES );
+define ( "TYPE_PRECT",  3 + TYPE_PRIMITIVES );
 define ( "TYPE_PCIRCLE",  4 + TYPE_PRIMITIVES );
 define ( "TYPE_PELLIPSE",  5 + TYPE_PRIMITIVES );
 
