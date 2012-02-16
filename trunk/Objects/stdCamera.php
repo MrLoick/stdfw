@@ -15,7 +15,7 @@ Class stdCamera extends stdObject
     Protected $_Target = null;
     
     Public Function Get_Target(){return $this->_Target;}
-    Public Function Set_Target(IMovable $Target){$this->_Target = $Target;}
+    Public Function Set_Target(IObject $Target){$this->_Target = $Target;}
     Public Function Set_Position(Vector2 $Position){$this->_Position = $Position; $this->CameraConfig();}
     Public Function Set_Angle($Angle) {$this->_Angle = $Angle; $this->CameraConfig();}
     Public Function Get_Scale(){return $this->_Scale;}
@@ -41,8 +41,8 @@ Class stdCamera extends stdObject
     {
         IF($this->_Target)
         {
-            $this->Position = $this->_Target->Position;      
-            $this->Position->X += stdDrawing::$Game->Screen->Width;
+            $this->Position = vec2( $this->_Target->_Position->X - ((stdDrawing::$Game->Screen->Width / 2)-($this->_Target->_Size->X/2)),
+                                    $this->_Target->_Position->Y - ((stdDrawing::$Game->Screen->Height / 2)-($this->_Target->_Size->Y/2)));
         }
     }
 }
