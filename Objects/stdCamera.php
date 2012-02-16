@@ -39,7 +39,7 @@ Class stdCamera extends stdObject
     Public Function Update($DeltaTime)
     {
         IF($this->_Target)
-            $this->Position = $this->_Target;            
+            $this->Position = $this->_Target->Position;            
     }
 }
 
