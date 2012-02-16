@@ -16,10 +16,10 @@ Class stdCamera extends stdObject
     
     Public Function Get_Target(){return $this->_Target;}
     Public Function Set_Target(IObject $Target){$this->_Target = $Target;}
-    Public Function Set_Position(Vector2 $Position){$this->_Position = $Position; $this->CameraConfig();}
-    Public Function Set_Angle($Angle) {$this->_Angle = $Angle; $this->CameraConfig();}
+    Public Function Set_Position(Vector2 $Position){$this->_Position = $Position; $this->CFG();}
+    Public Function Set_Angle($Angle) {$this->_Angle = $Angle; $this->CFG();}
     Public Function Get_Scale(){return $this->_Scale;}
-    Public Function Set_Scale($Scale){$this->_Scale = $Scale; $this->CameraConfig();}
+    Public Function Set_Scale($Scale){$this->_Scale = $Scale; $this->CFG();}
     
     Public Function __construct(Vector2 $Position, $Angle = 0, $Scale = 1, $Instance = null)
     {
@@ -32,7 +32,7 @@ Class stdCamera extends stdObject
             $this->_Camera = stdCam($Position->X, $Position->Y, $Angle, $Scale);
     }
     
-    Protected Function CameraConfig()
+    Protected Function CFG()
     {
         stdCamCFG($this->_Camera, $this->_Position->X, $this->_Position->Y, $this->_Angle, $this->_Scale);
     }
@@ -41,8 +41,9 @@ Class stdCamera extends stdObject
     {
         IF($this->_Target)
         {
-            $this->Position = vec2( $this->_Target->_Position->X - ((stdDrawing::$Game->Screen->Width / 2)-($this->_Target->_Size->X/2)),
-                                    $this->_Target->_Position->Y - ((stdDrawing::$Game->Screen->Height / 2)-($this->_Target->_Size->Y/2)));
+            $Target = $this->_Target->Center;
+            $this->Position = vec2( $Target->X - stdDrawing::$Game->Screen->Width / 2,
+                                    $Target->Y - stdDrawing::$Game->Screen->Height / 2 );
         }
     }
 }

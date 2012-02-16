@@ -43,6 +43,7 @@ Class stdObject extends Prototype implements IObject
     Public Function Get_Height(){return $this->Size->Y;}
     Public Function Set_Width($X){$this->Size->X = $X;}
     Public Function Set_Height($Y){$this->Size->Y = $Y;}
+    Public Function Get_Center(){return vec2( $this->_Position->X + ($this->_Size->X / 2), $this->_Position->Y + ($this->_Size->Y / 2) );}
     Public Function Update($DeltaTime){}
     Public Function Draw($DeltaTime){}
     Public Function SetAngleTowardPosition(Vector2 $Position)
