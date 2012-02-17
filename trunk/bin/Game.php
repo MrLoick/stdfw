@@ -13,7 +13,6 @@ Class Game extends stdGame
         global $Miku, $Tux, $Song2;
         $Miku = new stdTexture('Content/player.png', RGB(255, 0, 255));
         $Tux = new stdTexture('Content/tux.png');
-        $Song1 = new stdSound('Content/song1.mp3', vec3(0,0,0));
         $Song2 = new stdSound('Content/ad4.wav', vec3(0,0,0));
     }
     
