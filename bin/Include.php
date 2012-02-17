@@ -2,6 +2,7 @@
 
 $Sources = Array (  
                     'stdConstants.php', 
+                    'stdColor.php',
                     'Prototype.php',
                     'stdCore.php',
                     'stdEvent.php',
