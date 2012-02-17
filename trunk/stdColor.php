@@ -126,10 +126,10 @@ Function HSV($H,$S,$V) {
 Function RGB($R, $G, $B) 
 {
         $HEX = "0x";
-        $HEX.= str_pad(decHEX($R), 2, "0", STR_PAD_LEFT);
-        $HEX.= str_pad(decHEX($G), 2, "0", STR_PAD_LEFT);
-        $HEX.= str_pad(decHEX($B), 2, "0", STR_PAD_LEFT);
-
+        $HEX .= str_pad(decHEX($R), 2, "0", STR_PAD_LEFT);
+        $HEX .= str_pad(decHEX($G), 2, "0", STR_PAD_LEFT);
+        $HEX .= str_pad(decHEX($B), 2, "0", STR_PAD_LEFT);
+        @eval('$HEX = '.$HEX.';');
         Return $HEX;
 }
 
