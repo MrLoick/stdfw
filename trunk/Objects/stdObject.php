@@ -17,7 +17,9 @@ Class stdObject extends Prototype implements IObject
     Protected $_Alpha = 255;
     Protected $_Color = clWhite;
     Protected $_FX = FX_BLEND;
+    Protected $_Self;
     
+    Public Function Get_Self(){return $_Self;}
     Public Function Get_Type(){return $this->_Type;}
     Public Function Get_Position(){return $this->_Position;}
     Public Function Set_Position(Vector2 $Position){$this->_Position = $Position;}
@@ -44,12 +46,13 @@ Class stdObject extends Prototype implements IObject
     Public Function Set_Width($X){$this->Size->X = $X;}
     Public Function Set_Height($Y){$this->Size->Y = $Y;}
     Public Function Get_Center(){return vec2( $this->_Position->X + ($this->_Size->X / 2), $this->_Position->Y + ($this->_Size->Y / 2) );}
+    Public Function Debug($Name=null){if(!$Name) $Name = $this->_Self; debug_add($this,$Name);}
     Public Function Update($DeltaTime){}
     Public Function Draw($DeltaTime){}
     Public Function SetAngleTowardPoint( $X, $Y, $Offset = 0 )
     {
         $Center = $this->Center;
-        $this->_Angle = AngleTowardPos( $Center->X, $Center->Y, $X, $Y ) + $Offset;
+        $this->_Angle = AngleTowardPosition( $Center->X, $Center->Y, $X, $Y ) + $Offset;
     }
     Public Function SetAngleTowardPosition( Vector2 $Position, $Offset = 0 )
     {
@@ -62,7 +65,10 @@ Class stdObject extends Prototype implements IObject
     }
     Public Function __construct()
     {
+        $this->_Self = md5(microtime(1).rand(0,1000000).rand(0,1000000));
         $this->_Position = vec2();
-        $this->_Size = vec2();	
+        $this->_Size = vec2();
+        stdEvent::Reg(EVENT_DRAW, array($this,Draw));
+        stdEvent::Reg(EVENT_UPDATE, array($this,Update));
     }
 }

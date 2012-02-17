@@ -25,6 +25,7 @@ Class stdSSprite extends stdObject
     
     Public Function Draw($DeltaTime)
     {
-        SSprite_Draw( $this->_Texture->Id, $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Angle, $this->_Alpha, $this->_FX );
+        IF($this->_Visible)
+            SSprite_Draw( $this->_Texture->Id, $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Angle, $this->_Alpha, $this->_FX );
     }
 }
