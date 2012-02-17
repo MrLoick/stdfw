@@ -2,11 +2,13 @@
 
 $Sources = Array (  
                     'stdConstants.php', 
+                    'stdControllers.php',
                     'stdColor.php',
                     'Prototype.php',
                     'stdCore.php',
                     'stdEvent.php',
                     'stdScreen.php',
+                    'stdSound.php', 
                     'Interfaces/IColorable.php',
                     'Interfaces/IMovable.php',
                     'Interfaces/ISizeable.php',

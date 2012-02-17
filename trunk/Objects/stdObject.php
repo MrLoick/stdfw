@@ -19,7 +19,7 @@ Class stdObject extends Prototype implements IObject
     Protected $_FX = FX_BLEND;
     Protected $_Self;
     
-    Public Function Get_Self(){return $_Self;}
+    Public Function Get_Self(){return $this->_Self;}
     Public Function Get_Type(){return $this->_Type;}
     Public Function Get_Position(){return $this->_Position;}
     Public Function Set_Position(Vector2 $Position){$this->_Position = $Position;}
