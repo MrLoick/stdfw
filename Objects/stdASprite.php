@@ -20,6 +20,7 @@ Class stdASprite extends stdSSprite
     
     Public Function Draw($DeltaTime)
     {
-        ASprite_Draw( $this->_Texture->Id, $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Angle, $this->Animation->Frame, $this->_Alpha, $this->_FX );
+        IF($this->_Visible)
+            ASprite_Draw( $this->_Texture->Id, $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Angle, $this->Animation->Frame, $this->_Alpha, $this->_FX );
     }
 }

@@ -17,7 +17,7 @@ DEFINE ( "R", "\r" );
 DEFINE ( "N", "\n" );
 DEFINE ( "RN", R.N );
 
-DEFINE ( "T", "\t  " );
+DEFINE ( "T", "\t" );
 
 DEFINE ( "DEFAULT_INDEX", 0 );
 
@@ -30,6 +30,7 @@ DEFINE ( "EVENT_LOAD", 1 + EVENT_CORE );
 DEFINE ( "EVENT_DRAW", 2 + EVENT_CORE );
 DEFINE ( "EVENT_UPDATE", 3 + EVENT_CORE );
 DEFINE ( "EVENT_QUIT", 4 + EVENT_CORE );
+DEFINE ( "EVENT_TIMER", 5 + EVENT_CORE );
 
 DEFINE ( "TYPE_PRIMITIVES", 0xff );
 DEFINE ( "TYPE_OBJECT",  1 );

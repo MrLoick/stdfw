@@ -13,6 +13,7 @@ Class stdPixel extends stdObject
     
     Public Function __construct(Vector2 $Position, $Color = clWhite, $Alpha = 255)
     {
+        parent::__construct();
         $this->Position = $Position;
         $this->Size = vec2(1, 1);
         $this->Color = $Color;
@@ -21,6 +22,7 @@ Class stdPixel extends stdObject
     
     Public Function Draw($DeltaTime)
     {
-        pr2d_Pixel( $this->_Position->X, $this->_Position->Y, $this->_Color, $this->_Alpha );
+        IF($this->_Visible)
+            pr2d_Pixel( $this->_Position->X, $this->_Position->Y, $this->_Color, $this->_Alpha );
     }
 }

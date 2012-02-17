@@ -21,6 +21,8 @@ Class Prototype
         $Property = array($this,'Set_'.$Key);
         IF(is_callable($Property))
             call_user_func($Property, $Value);
+        ELSE
+            $this->{$Key} = $Value;
     }
     
     Public Function __isset($Key)
@@ -38,7 +40,7 @@ Class Prototype
             call_user_func($Property);
     }
     
-    Public Function toArray($Object = null)
+    Public Function toArray( $Object = null )
     {
         $Array = Array();
         IF(!$Object)
@@ -53,7 +55,7 @@ Class Prototype
         return $Array;
     }
     
-    Public Function toString($Object = null,$Index=T)
+    Public Function toString( $Object = null, $Index = '' )
     {
         $String = '';
         IF(!$Object)
@@ -61,10 +63,24 @@ Class Prototype
         ForEach( $Object As $Key => $Value )
         {
             IF(is_array($Value))
-                $String .= $Index.'['.$Key.']:'.RN.$this->toString($Value,$Index.$Index).RN;
+                $String .= $Index.'['.$Key.']:'.RN.$this->toString($Value,$Index.'     ').RN;
             ELSE
-                $String .= $Index.$Key . ': ' . $Value.RN;
+                $String .= $Index.$Key . ': ' . $Value.' '.RN;
         }
         return $String;
+    }
+    
+    Public Function toDebug( $Object = null )
+    {
+        IF(!$Object)
+            $Object = $this;
+        return json_encode( $this->toArray() );
+    }
+    
+    Public Function toJSON( $Object = null )
+    {
+        IF(!$Object)
+            $Object = $this;
+        return json_encode($Object);
     }
 }

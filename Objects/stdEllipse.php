@@ -18,6 +18,7 @@ Class stdEllipse extends stdObject
 
     Public Function __construct(Vector2 $Position, Vector2 $Radius, $Color = clWhite, $Alpha = 255, $Quality = 32, $FX = FX_BLEND)
     {
+        parent::__construct();
         $this->_Position = $Position; 
         $this->_Radius = $Radius;
         $this->_Color = $Color;
@@ -28,6 +29,7 @@ Class stdEllipse extends stdObject
     
     Public Function Draw($DeltaTime)
     {
-        pr2d_Ellipse( $this->_Position->X, $this->_Position->Y, $this->_Radius->X, $this->_Radius->Y, $this->_Color, $this->_Alpha, $this->_Quality, $this->_FX );
+        IF($this->_Visible)
+            pr2d_Ellipse( $this->_Position->X, $this->_Position->Y, $this->_Radius->X, $this->_Radius->Y, $this->_Color, $this->_Alpha, $this->_Quality, $this->_FX );
     }
 }

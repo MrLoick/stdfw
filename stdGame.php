@@ -8,6 +8,8 @@
 
 Class stdGame extends Prototype
 {
+    Private Static $Current;
+    
     Public $Physics = false;
     Public $VSync = false;
     Public $FullScreen = false;
@@ -15,17 +17,16 @@ Class stdGame extends Prototype
     Public $Camera;
     Public $Screen;
 
-    Public Function Get_FPS()
-    {
-        return stdFPS();	
-    }
+    Public Static Function Current(){return self::$Current;}
+    
+    Public Function Get_FPS(){return stdFPS();}
 
     Public Function __construct()
     {
         $this->Camera = new stdCamera( vec2(), 0, 1, MAIN_CAM );
         $this->Screen = new stdScreen;
         
-        stdDrawing::$Game = $this;
+        self::$Current = $this;
         
         stdEvent::Reg( EVENT_LOAD, array($this,LoadContent) );
         stdEvent::Reg( EVENT_INIT, array($this,Initialize) );

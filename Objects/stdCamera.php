@@ -23,6 +23,7 @@ Class stdCamera extends stdObject
     
     Public Function __construct(Vector2 $Position, $Angle = 0, $Scale = 1, $Instance = null)
     {
+        parent::__construct();
         $this->_Position = $Position;
         $this->_Angle = $Angle;
         $this->_Scale = $Scale;
@@ -42,8 +43,8 @@ Class stdCamera extends stdObject
         IF($this->_Target)
         {
             $Target = $this->_Target->Center;
-            $this->Position = vec2( $Target->X - stdDrawing::$Game->Screen->Width / 2,
-                                    $Target->Y - stdDrawing::$Game->Screen->Height / 2 );
+            $this->Position = vec2( $Target->X - stdGame::Current()->Screen->Width / 2,
+                                    $Target->Y - stdGame::Current()->Screen->Height / 2 );
         }
     }
 }

@@ -13,6 +13,7 @@ Class stdLine extends stdObject
     
     Public Function __construct(Vector2 $Position, Vector2 $Size, $Color = clWhite, $Alpha = 255, $FX = FX_BLEND)
     {
+        parent::__construct();
         $this->Position = $Position; 
         $this->Size = $Size;
         $this->Color = $Color;
@@ -22,6 +23,7 @@ Class stdLine extends stdObject
     
     Public Function Draw($DeltaTime)
     {
-        pr2d_Line( $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Color, $this->_Alpha, $this->_FX );
+        IF($this->_Visible)
+            pr2d_Line( $this->_Position->X, $this->_Position->Y, $this->_Size->X, $this->_Size->Y, $this->_Color, $this->_Alpha, $this->_FX );
     }
 }

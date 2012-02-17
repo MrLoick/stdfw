@@ -1,10 +1,10 @@
 <?
 
-$Sources = array(   'stdConstants.php', 
+$Sources = Array (  
+                    'stdConstants.php', 
                     'Prototype.php',
                     'stdCore.php',
                     'stdEvent.php',
-                    'stdDrawing.php',
                     'stdScreen.php',
                     'Interfaces/IColorable.php',
                     'Interfaces/IMovable.php',
@@ -24,7 +24,8 @@ $Sources = array(   'stdConstants.php',
                     'Objects/stdLine.php', 
                     'Objects/stdRect.php',
                     'Objects/stdCircle.php', 
-                    'Objects/stdEllipse.php');
+                    'Objects/stdEllipse.php'
+                  );
 
 $Path = '../';
 
