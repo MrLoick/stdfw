@@ -72,9 +72,20 @@ Class Prototype
     
     Public Function toDebug( $Object = null )
     {
+        $String = '{';
         IF(!$Object)
             $Object = $this;
-        return json_encode( $this->toArray() );
+        ForEach( (object)$Object As $Key => $Value )
+        {
+            IF(is_object($Value))
+                $String .= '"'.$Key.'":'.$this->toDebug($Value).',';
+            ElseIF(is_array($Value))
+                $String .= '"'.$Key.'":"'.json_encode($Value).'",';
+            ELSE
+                $String .= '"'.$Key.'":'.json_encode($Value).',';
+        }
+        $String = substr($String, 0, strlen($String)-1).'}';
+        return $String;
     }
     
     Public Function toJSON( $Object = null )
