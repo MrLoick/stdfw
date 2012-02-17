@@ -44,7 +44,6 @@ Class Game extends stdGame
         debug_add($Miku->Size);
         debug_add($Sprite, 'Player');
         debug_add($Sprite2);
-        debug_add($Song1, "Song");
         
         $Sprite->Debug('My Super Player!!!');
         
