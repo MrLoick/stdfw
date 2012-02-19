@@ -8,7 +8,7 @@
 
 Class stdServer extends Connection
 {
-    Protected $_Ports = Array();
+    Protected $_Port;
     Protected $_Protocols = Array();
     Protected $_Connections = Array();
     
@@ -17,14 +17,15 @@ Class stdServer extends Connection
     Public $MaxConnections = 0;
     Public $MaxDataLength = 1024;
     
+    Public Function Get_Port(){return $this->_Port;}
     Public Function Get_Clients(){return $this->_Connections;}
     Public Function Get_ClientsCount(){return sizeof($this->_Connections);}
     
-    Public Function __construct( $IP = NETWORK_ADDR, $Port = NETWORK_PORT )
+    Public Function __construct( $Port = NETWORK_PORT, $IP = NETWORK_ADDR )
     {
         set_time_limit(0);
-        IF(!$IP) $IP = '0.0.0.0';
-        IF(!$Port) $Port = 7777;
+        IF(!$IP) $IP = NETWORK_ADDR;
+        IF(!$Port) $Port = NETWORK_PORT;
         
         $this->Attach(new Protocol);
         
@@ -69,14 +70,10 @@ Class stdServer extends Connection
         try
         {
             $this->_Socket = @socket_create( AF_INET, SOCK_STREAM, SOL_TCP );
-            @socket_set_option($this->_Socket, SOL_SOCKET, SO_KEEPALIVE, 0);
-            @socket_set_option($this->_Socket, SOL_SOCKET, SO_REUSEADDR, 1);
-            IF(is_array($Port))
-                ForEach($Port As $P)
-                    $this->Bind( $IP, $P );
-            ELSE
-                $this->Bind( $IP, $Port );
-            @socket_getsockname( $this->_Socket, $IP, $Port );
+            @socket_set_option( $this->_Socket, SOL_SOCKET, SO_KEEPALIVE, 0 );
+            @socket_set_option( $this->_Socket, SOL_SOCKET, SO_REUSEADDR, 1 );
+            $this->Bind( $IP, $Port );
+            @socket_getsockname( $this->_Socket, $this->_IP, $this->_Port );
             @socket_listen( $this->_Socket );
             @socket_set_nonblock( $this->_Socket );
         } catch ( Exception $e ){}
@@ -92,12 +89,7 @@ Class stdServer extends Connection
     
     Public Function Bind( $IP = NETWORK_ADDR, $Port = NETWORK_PORT )
     {
-        IF(!in_array($Port, $this->_Ports))
-        {
-            $this->_IP = $IP;
-            $this->_Ports[] = $Port;
-            return @socket_bind( $this->_Socket, $IP, $Port );
-        }
+        @socket_bind( $this->_Socket, $IP, $Port );
         return $this;
     }
     

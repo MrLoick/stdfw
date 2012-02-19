@@ -18,7 +18,7 @@ Class Connection extends Prototype
     
     Public Function __construct($Socket, $GetPeerName = true)
     {
-        $this->_ID = strtoupper(md5(sha1(rand(0,100000)+microtime(1)).sha1(microtime(1))));
+        $this->_ID = strtoupper(md5(sha1(uniqid('',true))));
         
         IF($Socket)
         {
