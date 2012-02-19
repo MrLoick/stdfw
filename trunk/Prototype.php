@@ -21,8 +21,6 @@ Class Prototype
         $Property = array($this,'Set_'.$Key);
         IF(is_callable($Property))
             call_user_func($Property, $Value);
-        ELSE
-            $this->{$Key} = $Value;
     }
     
     Public Function __isset($Key)
@@ -38,6 +36,12 @@ Class Prototype
         $Property = array($this,'UnSet_'.$Key);
         IF(is_callable($Property))
             call_user_func($Property);
+    }
+    
+    Public Function Free()
+    {
+        ForEach((Object)$this As $Key=>$Value)
+            unset($this->{$Key});
     }
     
     Public Function toArray( $Object = null )
