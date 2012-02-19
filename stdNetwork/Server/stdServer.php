@@ -31,9 +31,11 @@ Class stdServer extends Connection
         parent::__construct($this->Create($IP,$Port)->_Socket,false);
     }
     
-    Public Function Attach(Protocol $Protocol)
+    Public Function Attach()
     {
-        $this->_Protocols[get_class($Protocol)][] = $Protocol;
+        ForEach( (Array)func_get_args() As $Protocol )
+            IF( is_subclass_of( $Protocol, Protocol ) )
+                $this->_Protocols[get_class($Protocol)][] = $Protocol;
         return $this;
     }
     
@@ -48,8 +50,9 @@ Class stdServer extends Connection
     {
         ForEach( (Array) $this->_Protocols As $Protocols )
             ForEach( (Array) $Protocols As $Protocol )
-                IF( is_callable( Array($Protocol,$Type) ) )
-                    @call_user_func_array( Array($Protocol,$Type), $Arguments );
+                IF( is_subclass_of( $Protocol, Protocol ) )
+                    IF( is_callable( Array($Protocol,$Type) ) )
+                        @call_user_func_array( Array($Protocol,$Type), $Arguments );
         return $this;
     }
     
