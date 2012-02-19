@@ -40,7 +40,8 @@ $Path = '../';
 foreach((array)$Sources as $Source)
     require_once $Path.$Source;
 
-$Server = new stdServer;
-$Server->Attach(new HTTP_Protocol)->Listen();
+$Thread = new TThread('server');
+$Thread->priority = tpLower;
+$Thread->resume();
 
-//require('Game.php');
+require('Game.php');
