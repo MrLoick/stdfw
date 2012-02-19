@@ -65,7 +65,7 @@ Class stdObject extends Prototype implements IObject
     }
     Public Function __construct()
     {
-        $this->_Self = md5(microtime(1).rand(0,1000000).rand(0,1000000));
+        $this->_Self = strtoupper(md5(sha1(uniqid('',true))));
         $this->_Position = vec2();
         $this->_Size = vec2();
         stdEvent::Reg(EVENT_DRAW, array($this,Draw));
