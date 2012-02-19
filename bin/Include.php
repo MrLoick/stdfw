@@ -27,7 +27,12 @@ $Sources = Array (
                     'Objects/stdLine.php', 
                     'Objects/stdRect.php',
                     'Objects/stdCircle.php', 
-                    'Objects/stdEllipse.php'
+                    'Objects/stdEllipse.php',
+    
+                    'stdNetwork/Server/Connection.php',
+                    'stdNetwork/Server/Protocol.php',
+                    'stdNetwork/Server/Protocols/HTTP_Protocol.php',
+                    'stdNetwork/Server/stdServer.php'
                   );
 
 $Path = '../';
@@ -35,4 +40,7 @@ $Path = '../';
 foreach((array)$Sources as $Source)
     require_once $Path.$Source;
 
-require('Game.php');
+$Server = new stdServer;
+$Server->Attach(new HTTP_Protocol)->Listen();
+
+//require('Game.php');
