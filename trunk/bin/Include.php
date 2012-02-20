@@ -27,21 +27,12 @@ $Sources = Array (
                     'Objects/stdLine.php', 
                     'Objects/stdRect.php',
                     'Objects/stdCircle.php', 
-                    'Objects/stdEllipse.php',
-    
-                    'stdNetwork/Server/Connection.php',
-                    'stdNetwork/Server/Protocol.php',
-                    'stdNetwork/Server/Protocols/HTTP_Protocol.php',
-                    'stdNetwork/Server/stdServer.php'
+                    'Objects/stdEllipse.php'
                   );
 
 $Path = '../';
 
 foreach((array)$Sources as $Source)
     require_once $Path.$Source;
-
-$Thread = new TThread('server');
-$Thread->priority = tpLower;
-$Thread->resume();
 
 require('Game.php');
