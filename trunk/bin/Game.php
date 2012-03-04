@@ -10,15 +10,16 @@ Class Game extends stdGame
 {
     Public Function LoadContent()
     {
-        global $Miku, $Tux, $Song2;
+        global $Miku, $Tux, $Song2, $Map;
         $Miku = new stdTexture('Content/player.png', RGB(255, 0, 255));
+        $Map = new stdTexture('Content/world.png', RGB(255, 0, 255));
         $Tux = new stdTexture('Content/tux.png');
         $Song2 = new stdSound('Content/ad4.wav', vec3(0,0,0));
     }
     
     Public Function Initialize()
     {
-        global $Miku, $Tux, $Sprite, $Sprite2, $Point, $a, $Song2;
+        global $Miku, $Tux, $Sprite, $Sprite2, $Point, $a, $Song2, $Map;
         
         debug_set(Miku2, "Hello World!!!");
         
@@ -26,7 +27,11 @@ Class Game extends stdGame
         $this->Screen->Caption = 'My firts game.';
         
         $Sprite = new stdASprite($Miku,4,4);
+        $Mapf = new stdTileMap(file_get_contents('Content/world.map'),$Map,32,32,CUT_BY_SIZE);
+        
+        
         $Sprite2 = new stdSSprite($Tux);
+        $Sprite2->Position = vec2(250,250);
         $Prim = new stdEllipse(vec2(500, 300), vec2(100,50));
         //pre(function_exists ( "pr2d_TriList" ));
         $this->Camera->Target = $Sprite;
