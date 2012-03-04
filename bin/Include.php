@@ -24,6 +24,7 @@ $Sources = Array (
                     'Vectors/Vector3.php', 
                     'Objects/stdSSprite.php', 
                     'Objects/stdASprite.php',
+                    'Objects/stdTileMap.php',
                     'Objects/stdPixel.php',
                     'Objects/stdLine.php', 
                     'Objects/stdRect.php',

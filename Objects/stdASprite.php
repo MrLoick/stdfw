@@ -11,6 +11,10 @@ Class stdASprite extends stdSSprite
     Protected $_Type = TYPE_ASPRITE;
     Public $Animation;
     
+    Public Function Get_Frame(){return $this->Animation->Get_Frame();}
+    Public Function Set_Frame($Frame){$this->Animation->Set_Frame($Frame);}
+    
+    
     Public Function __construct(stdTexture $Texture, $W=4, $H=4, $CutMethod = CUT_COUNT)
     {
         parent::__construct($Texture);

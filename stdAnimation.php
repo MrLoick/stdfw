@@ -13,14 +13,17 @@ Class stdAnimation extends Prototype
 
     Public $Speed = 1;
 
-    Public $_Frame = 1;
+    Private $_Frame = 1;
 
     Private $Delay = 100;
     Private $Tick = 0;
     Private $_Play = True;
 
     Private $TextureInfo;
-
+    
+    Public Function Get_FramesX(){return $this->TextureInfo->FramesX;}
+    Public Function Set_FramesY(){$this->TextureInfo->FramesY;}
+    
     Public Function __construct(stdTexture $Texture)
     {
         $this->TextureInfo = $Texture->Info;
@@ -64,6 +67,11 @@ Class stdAnimation extends Prototype
         return $W * ($R - 1) + $C;
     }
 
+    Public Function Set_Frame($Frame)
+    {
+        $this->_Frame = $Frame;
+    }
+    
     Public Function Get_Frame( $Row = NULL, $Col = NULL )
     {
         IF( !$this->_Play ) return $this->_Frame;
