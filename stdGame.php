@@ -31,9 +31,11 @@ Class stdGame extends Prototype
         stdEvent::Reg( EVENT_LOAD, array($this,LoadContent) );
         stdEvent::Reg( EVENT_INIT, array($this,Initialize) );
         stdEvent::Reg( EVENT_DRAW, array($this,Draw) );
-        stdEvent::Reg( EVENT_UPDATE, array($this,Update) );
-        stdEvent::Reg( EVENT_UPDATE, array($this,DefaultUpdate) );
+        //stdEvent::Reg( EVENT_UPDATE, array($this,Update) );
+        //stdEvent::Reg( EVENT_UPDATE, array($this,DefaultUpdate) );
         stdEvent::Reg( EVENT_QUIT, array($this,Quit) );
+		
+		Register($this,Update);
     }
 
     Public Function LoadContent(){}

@@ -69,6 +69,6 @@ Class stdObject extends Prototype implements IObject
         $this->_Position = vec2();
         $this->_Size = vec2();
         stdEvent::Reg(EVENT_DRAW, array($this,Draw));
-        stdEvent::Reg(EVENT_UPDATE, array($this,Update));
+        Register($this,Update);
     }
 }
