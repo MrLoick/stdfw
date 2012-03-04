@@ -1,6 +1,7 @@
 <?
 
 $Sources = Array (  
+                    'Utils.php', 
                     'stdConstants.php', 
                     'stdControllers.php',
                     'stdColor.php',
