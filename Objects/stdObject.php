@@ -65,10 +65,12 @@ Class stdObject extends Prototype implements IObject
     }
     Public Function __construct()
     {
-        $this->_Self = strtoupper(md5(sha1(uniqid('',true))));
+        $this->_Self = strtoupper(uniqid());
         $this->_Position = vec2();
         $this->_Size = vec2();
         stdEvent::Reg(EVENT_DRAW, array($this,Draw));
         Register($this,Update);
+		
+		$GLOBALS['StandardFramework'][$this->_Self] = $this;
     }
 }
