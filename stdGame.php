@@ -49,6 +49,7 @@ Class stdGame extends Prototype
             cpSpaceStep(MAIN_SPACE, normalize(0.002));
     }
     Public Function Quit(){}
+    Public Static Function Close(){Game_Exit();}
 
     Public Function Run()
     {
