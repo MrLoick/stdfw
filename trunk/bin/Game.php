@@ -27,7 +27,7 @@ Class Game extends stdGame
         $this->Screen->Caption = 'My firts game.';
         
         $Sprite = new stdASprite($Miku,4,4);
-        $Mapf = new stdTileMap(file_get_contents('Content/world.map'),$Map,32,32,CUT_BY_SIZE);
+        //$Mapf = new stdTileMap(file_get_contents('Content/world.map'),$Map,32,32,CUT_BY_SIZE);
         
         
         $Sprite2 = new stdSSprite($Tux);
