@@ -24,6 +24,6 @@ Abstract Class Mouse
     Public Static Function Down($Key) {return mouse_down($Key);}
     Public Static Function Up($Key) {return mouse_up($Key);}
     Public Static Function Click($Key) {return mouse_click($Key);}
-    Public Static Function Hide($Key) {stdSetCursorVisible(false);}
-    Public Static Function Show($Key) {stdSetCursorVisible(true);}
+    Public Static Function Hide() {stdSetCursorVisible(false);}
+    Public Static Function Show() {stdSetCursorVisible(true);}
 }
