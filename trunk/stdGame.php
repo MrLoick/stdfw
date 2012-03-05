@@ -32,9 +32,9 @@ Class stdGame extends Prototype
         stdEvent::Reg( EVENT_INIT, array($this,Initialize) );
         stdEvent::Reg( EVENT_DRAW, array($this,Draw) );
         //stdEvent::Reg( EVENT_UPDATE, array($this,Update) );
-        stdEvent::Reg( EVENT_UPDATE, array($this,DefaultUpdate) );
+        //stdEvent::Reg( EVENT_UPDATE, array($this,DefaultUpdate) );
         stdEvent::Reg( EVENT_QUIT, array($this,Quit) );
-	Register($this,Update);
+	Register($this,DefaultUpdate);
     }
 
     Public Function LoadContent(){}
@@ -43,6 +43,8 @@ Class stdGame extends Prototype
     Public Function Update($DeltaTime){}
     Public Function DefaultUpdate($DeltaTime)
     {
+		$this->Update($DeltaTime);
+		update_state();
         IF($this->Physics)
             cpSpaceStep(MAIN_SPACE, normalize(0.002));
     }
